@@ -669,7 +669,7 @@ main .servises .emotionalDesign{
 
 .aboutus:before{
 	content: "About";
-	font: 20vh/11vh HurmeGeomB, Arial, sans-serif;
+	font: 20vh/15vh HurmeGeomB, Arial, sans-serif;
 	position: absolute;
 	color: rgba(0,0,0,0.1);
 	top: 0;
@@ -679,7 +679,7 @@ main .servises .emotionalDesign{
 
 .contaktus:after{
 	content: "Conta";
-	font: 20vh/20vh HurmeGeomB, Arial, sans-serif;
+	font: 20vh/16vh HurmeGeomB, Arial, sans-serif;
 	position: absolute;
 	color: rgba(255,200,200,0.1);
 	bottom: 0;
