@@ -681,7 +681,7 @@ main .servises .emotionalDesign{
 	content: "Conta";
 	font: 20vh/16vh HurmeGeomB, Arial, sans-serif;
 	position: absolute;
-	color: rgba(255,200,200,0.1);
+	color: rgba(100,100,110,0.1);
 	bottom: 0;
 	right: 0;
 	z-index: -1;
