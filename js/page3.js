@@ -7,7 +7,7 @@ console.log(slideCount);
 
 
 var windowSlide = document.getElementById('windowSlider');
-var oneSlide =  document.querySelector('.uxui').offsetHeight + 6;
+var oneSlide =  document.querySelector('.uxui').offsetHeight;
 
 
 function nextSlide() {
