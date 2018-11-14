@@ -1,0 +1,12 @@
+<svg width="78" height="47" viewBox="0 0 78 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="48" y1="42.5" x2="66" y2="42.5" stroke="white"/>
+<line x1="48" y1="40.5" x2="65" y2="40.5" stroke="white"/>
+<path d="M65 41H61M71 26V13H49V41H58" stroke="white" stroke-width="2"/>
+<line x1="65" y1="44.5" x2="78" y2="44.5" stroke="white"/>
+<line x1="65" y1="46.5" x2="78" y2="46.5" stroke="white"/>
+<path d="M70.5 45H66V27H77V45H72.5" stroke="white" stroke-width="2"/>
+<path d="M49 14V36H8V1H67V13H50H49V14Z" stroke="white" stroke-width="2"/>
+<line y1="39" x2="48" y2="39" stroke="white" stroke-width="2"/>
+<line y1="37.5" x2="27" y2="37.5" stroke="white"/>
+<line x1="44" y1="37.5" x2="48" y2="37.5" stroke="white"/>
+</svg>
