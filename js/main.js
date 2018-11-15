@@ -5,6 +5,7 @@ var withoutPortfolio = document.querySelectorAll('.cl-effect-4 li a');
 var thisPage = document.querySelectorAll('.pages a');
 
 
+/* Отображение пунктов меню*/
 portfolio.onclick = function(){
 	for(var i = 0; i < withoutPortfolio.length; i++){
 	withoutPortfolio[i].classList.remove('this_page');	
@@ -32,3 +33,4 @@ var page = function(){
 	return p;
 }
 	console.log(page());
+//----------------------------------------
