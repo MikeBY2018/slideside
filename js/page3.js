@@ -38,8 +38,8 @@ $(document).ready(function () {
 
 
 /*Возврат выделения пункта меню, который указывает на то, на какой странице мы находимся*/
-portfolioCo.onclick = function(){
+/*portfolioCo.onclick = function(){
     withoutPortfolio.classList.add('this_page');
     portfolio.classList.remove('this_page');
     portfolioCo.style.display = 'none';
-}
+}*/
