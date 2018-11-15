@@ -353,7 +353,7 @@ main .features{
 }
 main .features>div{
 	box-sizing: border-box;
-	max-width: 50%;
+	flex: 1 1 250px;
 	text-align: center;
 	font-size: .8em;
 
@@ -365,8 +365,8 @@ main .features>div{
 	min-width: 200px;
 
 	transition: all 500ms ease-in-out;
-
 }
+
 .firstops{
 	-webkit-animation: textOpacity 5s ease 500ms 2 normal backwards;
 	-o-animation: textOpacity 5s ease 500ms 2 normal backwards;
