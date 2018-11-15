@@ -216,7 +216,7 @@ main{
 
 /* Оформление кнопки About us*/
 main .button{
-	margin: 44vh 50% 11vh 0;
+	margin: 55vh 50% 0 0;
 }
 
 .button{
@@ -844,5 +844,8 @@ main .servises .emotionalDesign{
 	}
 	.adress h3{
 	font-size: 8vw;
+	}
+	main .button{
+	margin: 45vh 0 10vh 0;
 }
 }
