@@ -1346,9 +1346,10 @@ main .servises .emotionalDesign {
         font-size: 8vw;
     }
 
-    main .button {
-        margin: 45vh 0 10vh 0;
+    main #about{
+        position: static;
     }
+
     .content-portfolio-block > div:hover:after{
 	transform: translate(130vw);
 	}
@@ -1358,7 +1359,7 @@ main .servises .emotionalDesign {
     header nav{
         flex-direction: column;
         min-height: auto;
-        margin: 5vh 0 15vh;
+        margin: 5vh 0 6vh;/**/
     }
     #menu_toggle+ul li svg{
         display: none;
