@@ -35,16 +35,7 @@ var page = function(){
 	console.log(page());
 //----------------------------------------
 
-/*var pagesScroll = [];
-	pagesScroll[0] = '../index.html';
-	pagesScroll[1] = '../work/page_02.html';
-	pagesScroll[2] = '../work/page_03.html';
-	pagesScroll[3] = '../work/page_04.html';*/
-
-
-/*window.onload = function (e){
-	console.log(e);
-}*/
+/*--Переключение страниц по скроллу--*/
 
 var pagesScroll = document.querySelectorAll('div.pages a');
 var j = 0;
@@ -72,17 +63,41 @@ document.onwheel = function(event){
 	}
 
 }
+/*----------------*/
 
 
-/*
+/*---нажатие на меню---*/
+
+$(function(){
+	var $mt = $('nav #menu_toggle');
+	var $menu = $('nav ul');
+
+	$(window).resize(function(){
+		if($menu.css('display') == 'none' && window.innerWidth > 420){
+			$menu.show();
+		}
+	});
+	$mt.click(function(){
+		$menu.slideToggle(500);
+	});
+});
+
+/*--------------*/
 
 
-	var a = '';
-	for(i = 0; i < pagesScroll.length; i++){
-		a += pagesScroll[i];
+/*Плавность переключения*/
+/*$(document).ready(function() {
+    $("body").css("display", "none");
+
+    $("body").fadeIn(500);
+
+	$("a.transition").click(function(event){
+		event.preventDefault();
+		linkLocation = this.href;
+		$("body").fadeOut(250, redirectPage);
+	});
+
+	function redirectPage() {
+		window.location = linkLocation;
 	}
-	console.log(pagesScroll);
-	if(event.deltaY < 0){
-		/*window.location.href = pagesScroll[0];*/
-	/*};
-}*/
+});*/

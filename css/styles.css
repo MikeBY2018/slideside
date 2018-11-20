@@ -1,20 +1,20 @@
 /*Подключение шрифтов*/
-@font-face {
+@font-face{
     font-family: HurmeGeom;
     src: url('../fonts/HurmeGeometricSans1.otf');
 }
 
-@font-face {
+@font-face{
     font-family: HurmeGeomThin;
     src: url('../fonts/HurmeGeometricSans1Thin.otf');
 }
 
-@font-face {
+@font-face{
     font-family: HurmeGeomB;
     src: url('../fonts/HurmeGeometricSans1Bold.otf');
 }
 
-@font-face {
+@font-face{
     font-family: HurmeGeomSB;
     src: url('../fonts/HurmeGeometricSans1%20SemiBold.otf');
 }
@@ -67,6 +67,7 @@ body>div {
     background-size: cover;
     background-position: center;
     position: relative;
+    overflow: hidden;
     z-index: 2;
 }
 
@@ -83,9 +84,7 @@ canvas {
     z-index: 0;
 }
 
-/*.content{
-	position: relative;
-}*/
+
 #content-portfolio {
     /*width: 100vw;*/
     background-color: rgba(0, 0, 0, .6);
@@ -524,16 +523,6 @@ canvas {
 
 
 
-
-
-
-
-
-
-
-
-
-
 /*Настройка элементов*/
 a {
     display: inline-block;
@@ -568,6 +557,26 @@ li {
     position: relative;
 }
 
+#menu_toggle{
+    align-self: center;
+    background-color: rgba(0,0,0,0.2);
+    padding: 5px;
+    display: none;
+}
+#menu_toggle>span{
+    display: block;
+    width: 40px;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+}
+#menu_toggle>span:first-child{
+    margin: 0 0 10px;
+}
+#menu_toggle>span:last-child{
+    margin: 10px 0 0;
+}
+/**/
+
 /*Задание позиционирования стрелок*/
 .pin {
     fill: currentColor;
@@ -584,20 +593,22 @@ li {
 
 /*Оформление шапки*/
 header {
-    min-height: 100px;
-    /*background: #000;*/
+    
+   /* background: #000;*/ 
+}
+
+header nav{
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;
     display: flex;
+    justify-content: flex-end;
+    min-height: 15vh;
 }
-
-header nav {
-    margin-left: auto;
-    padding: 5vh 0;
+nav ul{
+    padding: 15px;
 }
-
 nav li {
     font-size: 14px;
     letter-spacing: .1em;
@@ -611,11 +622,14 @@ main {
     display: -o-flex;
     display: flex;
     justify-content: center;
+    min-height: 65vh;
 }
 
 /* Оформление кнопки About us*/
-main .button {
-    margin: 55vh 50% 0 0;
+main #about {
+    align-self: flex-end;
+    position: relative;
+    left: -20vw;
 }
 
 .button {
@@ -640,7 +654,7 @@ main .button {
 
 /*Оформление подвала сайта*/
 footer {
-    margin-top: auto;
+    margin-top: 5vh;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -936,7 +950,7 @@ main .servises .emotionalDesign {
 #windowSlider {
     color: #fff;
     width: 700px;
-    margin: 6vh 0 7vh;
+    margin: 7vh 0;
     overflow: hidden;
 }
 
@@ -1166,7 +1180,7 @@ main .servises .emotionalDesign {
 
 /*4 page*/
 .adress {
-    margin: 12vh 0;
+    margin: 12vh 0 13vh;
 }
 
 .adress div {}
@@ -1338,4 +1352,30 @@ main .servises .emotionalDesign {
     .content-portfolio-block > div:hover:after{
 	transform: translate(130vw);
 	}
+
+    /* Для меню */
+    .cl-effect-4{display: block;}
+    header nav{
+        flex-direction: column;
+        min-height: auto;
+        margin: 5vh 0 15vh;
+    }
+    #menu_toggle+ul li svg{
+        display: none;
+    }
+    #menu_toggle{
+        display: block;
+        align-self: flex-end;
+    }
+    #menu_toggle+ul{
+        background-color: rgba(200, 200, 255, 0.1); 
+        display: none;/**/
+        padding-left: 0;
+        padding-right: 0;
+        
+    }
+    #menu_toggle+ul li{
+        display: block;
+        text-align: right;
+    }
 }
