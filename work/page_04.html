@@ -7,154 +7,160 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="../css/styles.css">
+	<script src = "https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="../js/transition.js"></script>
 </head>
 <body>
-	<div class="backg4">
-		<div class="container ">
-		
-			<div class="wrapper">
-				<!--Шапка сайта-->
-				<header>
-					<!--Отрисовка иконок использующихся в документе-->
-					<svg class = "hidden">
-						<symbol id="icon-vk" viewBox="0 0 800 800">
-							<title>vk</title>
-							<path d="M393 566c-135 0-208-143-276-285-10-21 6-23 16-23l81-1c12 0 17 9 20 15 13 31 66 142 92 129 18-9 15-107 4-122-7-9-20-12-26-13-5-1 3-11 13-16 18-9 87-9 111-3 28 7 19 32 19 95 0 20-4 50 11 58 24 12 81-101 91-131 3-8 9-11 19-11h85c20 0 27 1 30 8 5 12-9 40-44 87-57 77-65 70-17 114 46 42 55 63 57 66 14 28-11 34-21 34h-76c-9 0-21 0-38-11-29-19-55-70-76-64-17 5-20 34-21 53-1 16-10 21-20 21h-34z"/>
-						</symbol>
-						<symbol id="icon-dribble" viewBox="0 0 800 800">
-							<title>dribble</title>
-							<path d="M400 665c-146 0-265-119-265-265s119-265 265-265 265 119 265 265-119 265-265 265zm223-229s-69-22-140-9c30 81 43 161 43 161s82-49 97-152zM488 609s-15-90-48-172c-132 44-179 142-179 142s96 83 227 30zm-256-57c80-128 193-152 193-152s-12-27-19-39c-124 37-232 32-232 32s-8 87 58 159zm-54-198s102 2 210-28c-38-71-84-130-84-130-107 49-126 158-126 158zm169-174s50 65 85 134c84-31 118-83 118-83s-76-78-203-51zm102 167c6 11 20 44 20 44s64-11 157 7c0-85-51-141-51-141s-38 55-126 90z"/>
-						</symbol>
-						<symbol id="icon-facebook" viewBox="0 0 800 800">
-							<title>facebook</title>
-							<path d="M445 643h-90V419h-75v-87h75v-64q0-55 32-86 30-29 80-29 28 0 67 3v78h-47q-42 0-42 38v60h86l-11 87h-75v224z"/>
-						</symbol>
-						<symbol id="icon-onward" viewBox="0 0 29 16">
-							<title></title>
-							<path d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9L28 9V7L0 7L0 9Z"/>
-						</symbol>
-						<symbol id="icon-down" viewBox="0 0 40 10">
-							<title></title>
-							<path d="M9 15L17.6603 0H0.339746L9 15Z"/>						
-						</symbol>
-						<symbol id="icon-read">
-							<line x1="0" y1="20" x2="140" y2="20" stroke-width="3" />
-							<polygon points="145,20 130,35 130,5" stroke-width="3" />	
-						</symbol>
-					</svg>
-					<!--Основная навигация в шапке-->
-					<nav>
-						<div id="menu_toggle"><span></span><span></span><span></span></div>
-						<ul class="cl-effect-4">
-							<li><a href="page_03.html">Services</a></li>
-							<li><a href="#" id="portfolio">Portfolio
-									<svg class = "pin">
-										<use xlink:href="#icon-down"></use>
-									</svg>
-								</a>
-							</li>
-							<li><a href="#" class="this_page">Contact Us
-									<svg class = "pin">
-										<use xlink:href="#icon-onward"></use>
-									</svg>
-								</a>
-							</li>
-						</ul>
-					</nav>
-				</header>
-				<main>
-					<div class="maincode">
-						<div class="main">
-							<span class="m">M</span>
-							<span class="a">А</span>
-							<span class="i">I</span>
-							<span class="n">N</span>
-						</div>
-						<div class="code">
-							<span class="c">C</span>
-							<span class="o">O</span>
-							<span class="d">D</span>
-							<span class="e">E</span>
-						</div>
-					</div>
-					<div id="content-portfolio">
-						<div class="content-portfolio-block">
-							<div class="page41">
-								<a href="http://attestation-78b1ba.webflow.io/">
-									<svg class="icon-read" width="50" height="16" viewBox="30 0 150 40">
-										<use xlink:href="#icon-read"></use>
-									</svg>
-								</a>
-								<span>attestation.io</span>
-							</div>
-							<div class="page42">
-								<a href="http://tost-master.tk">
-									<svg class="icon-read" width="50" height="16" viewBox="30 0 150 40">
-										<use xlink:href="#icon-read"></use>
-									</svg>
-								</a>
-								<span>tost-master.tk</span>
-							</div>
-							<div class="page43">
-								<a href="https://mikeby1986.github.io/Site/">
-									<svg class="icon-read" width="50" height="16" viewBox="30 0 150 40">
-										<use xlink:href="#icon-read"></use>
-									</svg>
-								</a>
-								<span>kind-garten.ml</span>
-							</div>
-							<div class="page44">
-								<a href="http://ya.ru">
-									<svg class="icon-read" width="50" height="16" viewBox="30 0 150 40">
-										<use xlink:href="#icon-read"></use>
-									</svg>
-								</a>
-								<span>Website</span>									
-							</div>
-						</div>
-					</div>
-					<div class="adress">
-						<div>
-							<h3>Minsk, Vera Luksemburg`s st., 12/1</h3>	
-							<a href="mailto:kakoytoemail@mail.ru" target="_blank">kakoytoemail@mail.ru</a>
-							<a href="tel:+375297395881">+375 (29) 739 58 81</a>
-							<span class="cometa"></span>
-						</div>
-					</div>
-				</main>
-				<footer>
-					<!--Нумерация страницы и навигация между страницами-->
-					<div class="pages">
-						<a href="../index.html" class="transition"></a>
-						<a href="page_02.html" class="transition"></a>
-						<a href="page_03.html" class="transition"></a>
-						<a href="#" data-number-pages ="04/04"></a>  
-					</div>
-					<div class="social">
-						<a href="http://vk.com" target="_blank">
-							<svg class = "icon icon-vk">
-								<use xlink:href="#icon-vk"></use>
+	<div id="barba-wrapper">
+		<div class="barba-container">
+			<div class="backg4" id="barba-wrapper">
+				<div class="container barba-container">		
+					<div class="wrapper">
+						<!--Шапка сайта-->
+						<header>
+							<!--Отрисовка иконок использующихся в документе-->
+							<svg class = "hidden">
+								<symbol id="icon-vk" viewBox="0 0 800 800">
+									<title>vk</title>
+									<path d="M393 566c-135 0-208-143-276-285-10-21 6-23 16-23l81-1c12 0 17 9 20 15 13 31 66 142 92 129 18-9 15-107 4-122-7-9-20-12-26-13-5-1 3-11 13-16 18-9 87-9 111-3 28 7 19 32 19 95 0 20-4 50 11 58 24 12 81-101 91-131 3-8 9-11 19-11h85c20 0 27 1 30 8 5 12-9 40-44 87-57 77-65 70-17 114 46 42 55 63 57 66 14 28-11 34-21 34h-76c-9 0-21 0-38-11-29-19-55-70-76-64-17 5-20 34-21 53-1 16-10 21-20 21h-34z"/>
+								</symbol>
+								<symbol id="icon-dribble" viewBox="0 0 800 800">
+									<title>dribble</title>
+									<path d="M400 665c-146 0-265-119-265-265s119-265 265-265 265 119 265 265-119 265-265 265zm223-229s-69-22-140-9c30 81 43 161 43 161s82-49 97-152zM488 609s-15-90-48-172c-132 44-179 142-179 142s96 83 227 30zm-256-57c80-128 193-152 193-152s-12-27-19-39c-124 37-232 32-232 32s-8 87 58 159zm-54-198s102 2 210-28c-38-71-84-130-84-130-107 49-126 158-126 158zm169-174s50 65 85 134c84-31 118-83 118-83s-76-78-203-51zm102 167c6 11 20 44 20 44s64-11 157 7c0-85-51-141-51-141s-38 55-126 90z"/>
+								</symbol>
+								<symbol id="icon-facebook" viewBox="0 0 800 800">
+									<title>facebook</title>
+									<path d="M445 643h-90V419h-75v-87h75v-64q0-55 32-86 30-29 80-29 28 0 67 3v78h-47q-42 0-42 38v60h86l-11 87h-75v224z"/>
+								</symbol>
+								<symbol id="icon-onward" viewBox="0 0 29 16">
+									<title></title>
+									<path d="M28.7071 8.70711C29.0976 8.31658 29.0976 7.68342 28.7071 7.29289L22.3431 0.928932C21.9526 0.538408 21.3195 0.538408 20.9289 0.928932C20.5384 1.31946 20.5384 1.95262 20.9289 2.34315L26.5858 8L20.9289 13.6569C20.5384 14.0474 20.5384 14.6805 20.9289 15.0711C21.3195 15.4616 21.9526 15.4616 22.3431 15.0711L28.7071 8.70711ZM0 9L28 9V7L0 7L0 9Z"/>
+								</symbol>
+								<symbol id="icon-down" viewBox="0 0 40 10">
+									<title></title>
+									<path d="M9 15L17.6603 0H0.339746L9 15Z"/>						
+								</symbol>
+								<symbol id="icon-read">
+									<line x1="0" y1="20" x2="140" y2="20" stroke-width="3" />
+									<polygon points="145,20 130,35 130,5" stroke-width="3" />	
+								</symbol>
 							</svg>
-						</a>
-						<a href="https://dribbble.com/" target="_blank">
-							<svg class = "icon icon-dribble">
-								<use xlink:href="#icon-dribble"></use>
-							</svg>
-						</a>
-						<a href="http://fb.com"  target="_blank">
-							<svg class = "icon icon-facebook">
-								<use xlink:href="#icon-facebook"></use>
-							</svg>
-						</a>
-					</div>
-				</footer>
-			</div>	
-		</div> <!-- -->
-		<script src = "https://code.jquery.com/jquery-3.3.1.min.js"></script>
-		<script src = "../js/starsbackground.js"></script>
-		<script src = "../js/main.js"></script>
-		<!--Мерцающий фон-->
-		<canvas id="space"></canvas>
-	</div>
+							<!--Основная навигация в шапке-->
+							<nav>
+								<div id="menu_toggle"><span></span><span></span><span></span></div>
+								<ul class="cl-effect-4">
+									<li><a href="page_03.html">Services</a></li>
+									<li><a href="#" id="portfolio">Portfolio
+											<svg class = "pin">
+												<use xlink:href="#icon-down"></use>
+											</svg>
+										</a>
+									</li>
+									<li><a href="#" class="this_page">Contact Us
+											<svg class = "pin">
+												<use xlink:href="#icon-onward"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</nav>
+						</header>
+						<main>
+							<div class="maincode">
+								<div class="main">
+									<span class="m">M</span>
+									<span class="a">А</span>
+									<span class="i">I</span>
+									<span class="n">N</span>
+								</div>
+								<div class="code">
+									<span class="c">C</span>
+									<span class="o">O</span>
+									<span class="d">D</span>
+									<span class="e">E</span>
+								</div>
+							</div>
+							<div id="content-portfolio">
+								<div class="content-portfolio-block">
+									<div class="page41">
+										<a href="http://attestation-78b1ba.webflow.io/">
+											<svg class="icon-read" width="50" height="16" viewBox="30 0 150 40">
+												<use xlink:href="#icon-read"></use>
+											</svg>
+										</a>
+										<span>attestation.io</span>
+									</div>
+									<div class="page42">
+										<a href="http://tost-master.tk">
+											<svg class="icon-read" width="50" height="16" viewBox="30 0 150 40">
+												<use xlink:href="#icon-read"></use>
+											</svg>
+										</a>
+										<span>tost-master.tk</span>
+									</div>
+									<div class="page43">
+										<a href="https://mikeby1986.github.io/Site/">
+											<svg class="icon-read" width="50" height="16" viewBox="30 0 150 40">
+												<use xlink:href="#icon-read"></use>
+											</svg>
+										</a>
+										<span>kind-garten.ml</span>
+									</div>
+									<div class="page44">
+										<a href="http://ya.ru">
+											<svg class="icon-read" width="50" height="16" viewBox="30 0 150 40">
+												<use xlink:href="#icon-read"></use>
+											</svg>
+										</a>
+										<span>Website</span>									
+									</div>
+								</div>
+							</div>
+							<div class="adress">
+								<div>
+									<h3>Minsk, Vera Luksemburg`s st., 12/1</h3>	
+									<a href="mailto:kakoytoemail@mail.ru" target="_blank">kakoytoemail@mail.ru</a>
+									<a href="tel:+375297395881">+375 (29) 739 58 81</a>
+									<span class="cometa"></span>
+								</div>
+							</div>
+						</main>
+						<footer>
+							<!--Нумерация страницы и навигация между страницами-->
+							<div class="pages">
+								<a href="../index.html" class="transition"></a>
+								<a href="page_02.html" class="transition"></a>
+								<a href="page_03.html" class="transition"></a>
+								<a href="#" data-number-pages ="04/04" class="transition"></a>  
+							</div>
+							<div class="social">
+								<a href="http://vk.com" target="_blank">
+									<svg class = "icon icon-vk">
+										<use xlink:href="#icon-vk"></use>
+									</svg>
+								</a>
+								<a href="https://dribbble.com/" target="_blank">
+									<svg class = "icon icon-dribble">
+										<use xlink:href="#icon-dribble"></use>
+									</svg>
+								</a>
+								<a href="http://fb.com"  target="_blank">
+									<svg class = "icon icon-facebook">
+										<use xlink:href="#icon-facebook"></use>
+									</svg>
+								</a>
+							</div>
+						</footer>
+					</div>	
+				</div> <!-- -->
+
+				<!--Мерцающий фон-->
+				<canvas id="space"></canvas>		
+			</div>
+		</div>
+	</div>	
+	<script src = "../js/starsbackground.js"></script>
+	<script src = "../js/barba.min.js"></script>	
+	<script src = "../js/main.js"></script>
 </body>
 </html>

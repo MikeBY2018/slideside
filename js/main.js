@@ -57,9 +57,9 @@ for(i = 0; i < pagesScroll.length; i++){
 }
 document.onwheel = function(event){
 	if(event.deltaY < 0){
-	window.location.href = pagesScroll[j];
+	document.location.href = pagesScroll[j];
 	} else {
-	window.location.href = pagesScroll[a];	
+	document.location.href = pagesScroll[a];	
 	}
 
 }
@@ -86,18 +86,35 @@ $(function(){
 
 
 /*Плавность переключения*/
-/*$(document).ready(function() {
-    $("body").css("display", "none");
+/*Barba.Pjax.start();
+var ExpandTransition = Barba.BaseTransition.extend({
+	start: function(){
+		Promise
+			.all([this.newContainerLoading, this.zoom()])
+			.then(this.showNewPage.bind(this));
+	},
 
-    $("body").fadeIn(500);
-
-	$("a.transition").click(function(event){
-		event.preventDefault();
-		linkLocation = this.href;
-		$("body").fadeOut(250, redirectPage);
-	});
-
-	function redirectPage() {
-		window.location = linkLocation;
+	zoom: function(){
+		var deferred = Barba.Utils.deferred();
+		deferred.resolve();
+		return deferred.promise;
+	},
+	showNewPage: function(){
+		this.done();
 	}
+});
+
+Barba.Pjax.getTransition = function(){
+	var transitionObj = ExpandTransition;
+	return transitionObj;
+}
+var HideShowTransition = Barba.BaseTransition.extend({
+  start: function() {
+    this.newContainerLoading.then(this.finish.bind(this));
+  },
+
+  finish: function() {
+    document.body.scrollTop = 0;
+    this.done();
+  }
 });*/

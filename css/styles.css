@@ -27,6 +27,7 @@ body {
     font-family: HurmeGeom, Arial, sans-serif;
     /*height: 100vh;
 	overflow: hidden;*/
+    background-color: #333;
 }
 
 ul {
@@ -37,7 +38,7 @@ ul {
 
 /*настройка блоков отображения*/
 /*подложки на страницах*/
-body>div {
+body .backg1, body .backg2, body .backg3, body .backg4, {
     /*min-height: 100vh;*/
     background-repeat: no-repeat;
     background-size: cover;
