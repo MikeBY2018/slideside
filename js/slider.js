@@ -3,14 +3,15 @@ var slideNow = 1;
 var translateHeight = 0;
 var slideInterval = 3000;
 var slideCount = $('#slidewrapper').children().length;
-console.log(slideCount);
-
+// console.log(slideCount);
 
 var windowSlide = document.getElementById('windowSlider');
 var oneSlide =  document.querySelector('.uxui').offsetHeight;
+var oneSlide1 = $('#viewport').height() / slideCount;
 
 
 function nextSlide() {
+    
     if (slideNow == slideCount || slideNow <= 0 || slideNow > slideCount) {
         $('#slidewrapper').css('transform', 'translate(0, 0)');
         slideNow = 1;
@@ -25,8 +26,10 @@ function nextSlide() {
     };
 };
 
-windowSlide.style.height = oneSlide  + 'px';
+windowSlide.style.height = oneSlide1  + 'px';
 console.log(oneSlide);     
+console.log(oneSlide1);     
+     
 
 
 /*Время, через которое запускается функция слайда*/
