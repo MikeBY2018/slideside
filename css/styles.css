@@ -1,4 +1,5 @@
 @import url('animatepage.css');
+@import url('modal.css');
 
 /*Подключение шрифтов*/
 @font-face{
@@ -68,9 +69,9 @@ ul{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    /*position: relative;
-    overflow: hidden; //включить!
-    /*z-index: 2;*/
+    position: relative;
+    overflow: hidden; /* включить!*/
+
 }
 .clearfix::after{
     content: '';
@@ -87,12 +88,13 @@ canvas {
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 2;
 }
 
-/*PopUp block*/
-#content-portfolio {
-    width: 100vw;/**/
+/*PopUp block
+
+
+.modal-overlay {
+    width: 100vw;
     background-color: rgba(0, 0, 0, .6);
     position: fixed;
     top: 0;
@@ -105,7 +107,7 @@ canvas {
     color: #fff;
 }
 
-.content-portfolio-block {
+.modal {
     max-width: 1000px;
     display: -webkit-flex;
     display: -moz-flex;
@@ -121,14 +123,14 @@ canvas {
     justify-content: center;
 }
 
-.content-portfolio-block>div {
+.modal>div {
     min-width: 300px;
     flex: 1 1 45%;
     min-height: 230px;
     margin: 1.5%;
     background-color: #fff;
 	position: relative;
-	overflow: hidden;/**/
+	overflow: hidden;
 
 	background-size: cover;
 	background-position: center;
@@ -142,12 +144,12 @@ canvas {
 	transition-duration: 400ms;
 
 }
-.content-portfolio-block > div:after{
+.modal > div:after{
 	content: 'MAIN CODE';
 	line-height: 2em;
 	display: block;
 	width: 80px;
-	height: 300px;/**/
+	height: 300px;
 	position: absolute;
 	top: 0;
 	left: -200px;	
@@ -169,32 +171,14 @@ canvas {
 }
 .content-portfolio-block > div:hover:after{
 	transform: translate(770%);
-}
-
-.content-portfolio-block span {
-    font: 1.1em HurmeGeom, Arial, sans-serif;
-    letter-spacing: 0.2vw;
-    line-height: 4em;
-  	/*margin-left: 50px;*/
-  	padding: 0 10px;
-  	display: inline-block;
-  	background-color: rgba(80,80,80,0.6);
-}
+}*/
 
 
-.content-portfolio-block a{
-	position: absolute;
-	bottom: 10px; 
-	left: 10px; 
-	/*border: 1px solid #ccc;*/
-}
 
-.content-portfolio-block > div:hover a{
-	color: #fff;
-	box-shadow: 0 1px 5px 5px rgba(0,0,0,0.6);
-	border-radius: 4px;
-	background-color: rgba(80,80,80,0.6);
-}
+
+
+
+
 .page41 {
     background-image: url('../img/page41.jpg');
 }
@@ -214,7 +198,6 @@ canvas {
 .page42:hover{
     background-position: -5vh 0px;
 }
-
 
 .page43 {
     background-image: url('../img/page43.jpg');
@@ -236,6 +219,8 @@ canvas {
     background-position: 0px -5vh;
 }
 /*окончание блока PopUp*/
+
+
 .hidden {
     position: absolute;
     width: 0;
@@ -252,17 +237,14 @@ canvas {
     font: 1.4em HurmeGeomSB, Arial, sans-serif;
     z-index: 0;
 }
-
 .main {
     position: relative;
     top: 10vh;
 }
-
 .code {
     position: relative;
     top: 70vh;
 }
-
 .maincode span {
     display: inline-block;
     text-shadow: 0 0 5px rgba(0,0,0,0.7);
@@ -521,21 +503,12 @@ canvas {
 
 
 
-
-
-
-
-
-
-
-
 /*Настройка элементов*/
 a {
     display: inline-block;
     text-decoration: none;
     color: #999;
-    position: relative;
-    /*для того чтобы позиционировать стрелки после надписи ссылки*/
+    position: relative;    /*для того чтобы позиционировать стрелки после надписи ссылки*/
 }
 
 .icon {
@@ -564,26 +537,93 @@ li {
 }
 
 #menu_toggle{
-    align-self: center;
-    background-color: rgba(0,0,0,0.2);
-    padding: 5px;
     display: none;
+    position: relative;
 }
-#menu_toggle>span{
-    display: block;
-    width: 40px;
-    border: 1px solid #ccc;
-    margin: 10px 0;
-}
-#menu_toggle>span:first-child{
-    margin: 0 0 10px;
-}
-#menu_toggle>span:last-child{
-    margin: 10px 0 0;
-}
-/**/
 
-/*Задание позиционирования стрелок*/
+.visuallyHidden {
+    position: absolute; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height: 1px; width: 1px; 
+    margin: -1px; padding: 0; border: 0; 
+}
+
+.hamburger {
+    margin-left: auto;
+    margin-top: 30px;
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.hamburger .bar {
+    padding: 0;
+    width: 30px;
+    height: 4px;
+    background-color: #ccc;
+    display: block;
+    border-radius: 4px;
+    transition: all 0.4s ease-in-out;
+    position: absolute; 
+}
+.bar1 {
+    top: 0;
+}
+
+.bar2,
+.bar3 {
+    top: 13.5px;
+}
+
+.bar3 {
+    right: 0;
+}
+.bar4 {
+    bottom: 0;
+}
+
+.hamburger3 .bar1 {
+    transform-origin: 5%;
+}
+
+.hamburger3 .bar4 {
+    transform-origin: 5%;
+}
+
+.checkbox3:checked + label > .hamburger3 > .bar1{
+    transform: rotate(45deg);
+    height: 3px;
+    width: 42px;
+}
+
+.checkbox3:checked + label > .hamburger3 > .bar3{
+    transform: rotate(45deg);
+    height: 3px;
+    background-color: transparent;
+}
+
+.checkbox3:checked + label > .hamburger3 > .bar2{
+    transform: rotate(-45deg);
+    height: 3px;
+    background-color: transparent;
+}
+
+.checkbox3:checked + label > .hamburger3 > .bar4{
+    transform: rotate(-45deg);
+    height: 3px;
+    width: 42px;
+}
+
+/*----------------*/
+
+
+
+
+
+
+
+/*----------Задание позиционирования стрелок*/
 .pin {
     fill: currentColor;
     position: absolute;
@@ -597,10 +637,10 @@ li {
     transform: scaleY(-1);
 }
 
-/*Оформление шапки*/
+/*--------Оформление шапки*/
 header, footer{
-    background: rgba(0,0,0,0.4);
-    z-index: 10;/**/ 
+    background: rgba(0,0,0,0.4);/**/
+    z-index: 10;
     position: absolute;
     width: 100%;
     min-height: 15vh;
@@ -629,7 +669,7 @@ nav li {
     letter-spacing: .1em;
 }
 
-/*Оформление тела*/
+/* Оформление тела*/
 main {
     display: -webkit-flex;
     display: -moz-flex;
@@ -639,6 +679,7 @@ main {
     justify-content: center;
     min-height: 70vh;
     padding: 15vh 0;
+    z-index: 3;
 }
 
 /* Оформление кнопки About us*/
@@ -1318,8 +1359,8 @@ main .servises .emotionalDesign {
 }
 
 
-#page_02, #index, #page_04{
-   /*display: none; */
+#page_02, #index, #page_03,#page_04{
+  /*display: none;  */
 }
 
 /*медиа-запросы*/
@@ -1377,8 +1418,9 @@ main .servises .emotionalDesign {
     }
     #menu_toggle{
         display: block;
-        align-self: flex-end;
     }
+
+
     #menu_toggle+ul{
         background-color: rgba(200, 200, 255, 0.1); 
         display: none;/**/
