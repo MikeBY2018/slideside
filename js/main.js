@@ -21,15 +21,15 @@ window.onload = function(){
 	portfolioCo.onclick = function(){
 	    portfolio.classList.remove('this_page');
 	    portfolioCo.style.display = 'none';
-	    if(page() == '03/04'){
+	    /*if(page() == '03/04'){
 	   		withoutPortfolio[0].classList.add('this_page');
 		}else if(page() == '04/04'){
 			withoutPortfolio[2].classList.add('this_page');
-		}
+		}*/
 	}
 
 
-	/*var page = function(){
+	var page = function(){
 		var p;
 		for(var i = 0; i < thisPage.length; i++){
 			if(thisPage[i].hasAttribute('data-number-pages'))
@@ -37,7 +37,7 @@ window.onload = function(){
 		}
 		return p;
 	}
-		console.log(page());*/
+		console.log(page());/**/
 	//----------------------------------------
 
 	/*--Переключение страниц по скроллу--

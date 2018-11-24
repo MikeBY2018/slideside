@@ -1,3 +1,5 @@
+@import url('animatepage.css');
+
 /*Подключение шрифтов*/
 @font-face{
     font-family: HurmeGeom;
@@ -39,14 +41,12 @@ ul{
 
 /*настройка блоков отображения*/
 /*подложки на страницах*/
-body .backg1, body .backg2, body .backg3, body .backg4, {
-    /*min-height: 100vh;*/
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+.backg1, .backg2, .backg3, .backg4, {
+
+
 }
 
-/**/.backg1 {
+.backg1 {
     background-image: radial-gradient(circle closest-side at 50% 10%, #4b2c55 50px, #2b2040 500px);
 }
 
@@ -68,11 +68,15 @@ body .backg1, body .backg2, body .backg3, body .backg4, {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    position: relative;
-    overflow: hidden;/**///включить!
-    z-index: 2;
+    /*position: relative;
+    overflow: hidden; //включить!
+    /*z-index: 2;*/
 }
-
+.clearfix::after{
+    content: '';
+    clear: both;
+    display: block;
+}
 .wrapper {
     max-width: 1180px;
     margin: 0 auto;
@@ -83,20 +87,21 @@ canvas {
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 0;
+    z-index: 2;
 }
 
-
+/*PopUp block*/
 #content-portfolio {
-    /*width: 100vw;*/
+    width: 100vw;/**/
     background-color: rgba(0, 0, 0, .6);
-    position: absolute;
+    position: fixed;
     top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
     display: none;
-    z-index: 10;
+    z-index: 100;
     color: #fff;
 }
 
@@ -112,7 +117,7 @@ canvas {
     -ms-flex-wrap: wrap;
     -o-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin: 15vh auto;
+    margin: 10vh auto;
     justify-content: center;
 }
 
@@ -230,7 +235,7 @@ canvas {
 .page44:hover{
     background-position: 0px -5vh;
 }
-
+/*окончание блока PopUp*/
 .hidden {
     position: absolute;
     width: 0;
@@ -593,9 +598,18 @@ li {
 }
 
 /*Оформление шапки*/
-header {
-    
-   /* background: #000;*/ 
+header, footer{
+    background: rgba(0,0,0,0.4);
+    z-index: 10;/**/ 
+    position: absolute;
+    width: 100%;
+    min-height: 15vh;
+}
+header{
+    top: 0vh;
+}
+footer {
+    bottom: 0vh;
 }
 
 header nav{
@@ -605,7 +619,7 @@ header nav{
     display: -o-flex;
     display: flex;
     justify-content: flex-end;
-    min-height: 15vh;
+
 }
 nav ul{
     padding: 15px;
@@ -623,7 +637,8 @@ main {
     display: -o-flex;
     display: flex;
     justify-content: center;
-    min-height: 65vh;
+    min-height: 70vh;
+    padding: 15vh 0;
 }
 
 /* Оформление кнопки About us*/
@@ -655,28 +670,17 @@ main #about {
 
 /*Оформление подвала сайта*/
 footer {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    flex-direction: column;
-    padding: 10vh 0 5vh;
-    position: relative;
+    
 }
 
 .pages {
-    margin-left: auto;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    right: 0;
-    bottom: 7vh;
+    float: right;
+    text-align: right;
+    line-height: 0;
+    width: 60px;
 }
 
 .pages a {
-    margin-top: auto;
-    align-self: flex-end;
     width: 40px;
     height: 0px;
     border-style: solid;
@@ -684,12 +688,12 @@ footer {
     border-color: rgba(255, 255, 255, .5);
     transition: all 200ms ease;
 
-    margin: 5px 0 4px;
+    margin: 10px 0 0;
     position: relative;
 }
 
 .pages a:hover:not([data-number-pages]) {
-    border-color: #8d49e0;
+    border-color: #8d49d2;
     width: 50px;
 }
 
@@ -703,10 +707,12 @@ footer {
     content: attr(data-number-pages);
     position: absolute;
     left: -40px;
-    top: -8px;
+    top: 0;
     font-size: 0.8em;
 }
-
+.social{
+    padding-top: 5vh;
+}
 /* Effect bottom border enlarge */
 nav a {
     position: relative;
@@ -1312,8 +1318,8 @@ main .servises .emotionalDesign {
 }
 
 
-#page_02, #page_03, #page_04{
-    /*display: none;*/
+#page_02, #index, #page_04{
+   /*display: none; */
 }
 
 /*медиа-запросы*/
