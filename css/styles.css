@@ -28,8 +28,8 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: HurmeGeom, Arial, sans-serif;
-    /*height: 100vh;
-	overflow: hidden;*/
+    /*height: 100vh;*/
+	
     background-color: #3c3c3c;
 }
 
@@ -43,7 +43,7 @@ ul{
 /*настройка блоков отображения*/
 /*подложки на страницах*/
 .backg1, .backg2, .backg3, .backg4, {
-
+    
 
 }
 
@@ -64,13 +64,17 @@ ul{
 }
 
 /*Отображение на странице*/
+.slider-page{
+    position: relative;
+ 
+}
 .container {
     background-image: url('../img/background1.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
-    overflow: hidden; /* включить!*/
+    overflow: hidden;
 
 }
 .clearfix::after{
@@ -639,11 +643,12 @@ li {
 
 /*--------Оформление шапки*/
 header, footer{
-    background: rgba(0,0,0,0.4);/**/
+   /* background: rgba(0,0,0,0.4);*/
     z-index: 10;
-    position: absolute;
+    position: fixed;
     width: 100%;
     min-height: 15vh;
+
 }
 header{
     top: 0vh;
@@ -744,6 +749,7 @@ footer {
 
 }
 
+
 .pages a[data-number-pages]::after {
     content: attr(data-number-pages);
     position: absolute;
@@ -751,6 +757,8 @@ footer {
     top: 0;
     font-size: 0.8em;
 }
+
+
 .social{
     padding-top: 5vh;
 }
