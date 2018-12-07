@@ -12,10 +12,9 @@ $('document').ready(function() {
 	screenW = $(window).width();
 	
 	// Get the canvas
-	canvas = $('.space');
+	canvas = $('#space');
 	
 	// Fill out the canvas
-	for(var i = 0; i < canvas.lenght; i++){}
 	canvas.attr('height', screenH);
 	canvas.attr('width', screenW);
 	context = canvas[0].getContext('2d');
@@ -24,7 +23,7 @@ $('document').ready(function() {
 	for(var i = 0; i < numStars; i++) {
 		var x = Math.round(Math.random() * screenW);
 		var y = Math.round(Math.random() * screenH);
-		var length = 0 + Math.random() * 2;
+		var length = 1 + Math.random() * 2;
 		var opacity = Math.random();
 		
 		// Create a new star and draw

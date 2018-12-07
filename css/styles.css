@@ -1,4 +1,4 @@
-@import url('animatepage.css');
+/*@import url('animatepage.css');*/
 @import url('modal.css');
 
 /*Подключение шрифтов*/
@@ -66,15 +66,8 @@ ul{
 /*Отображение на странице*/
 .slider-page{
     position: relative;
- 
 }
 .container {
-    background-image: url('../img/background1.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    overflow: hidden;
 
 }
 .clearfix::after{
@@ -242,8 +235,7 @@ canvas {
     z-index: 0;
 }
 .main {
-    position: relative;
-    top: 10vh;
+
 }
 .code {
     position: relative;
@@ -676,6 +668,8 @@ nav li {
 
 /* Оформление тела*/
 main {
+    position: relative; 
+    z-index: 9;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -684,7 +678,7 @@ main {
     justify-content: center;
     min-height: 70vh;
     padding: 15vh 0;
-    z-index: 3;
+   
 }
 
 /* Оформление кнопки About us*/
@@ -708,6 +702,7 @@ main #about {
     background-image: linear-gradient(95deg, #5b2a5a 50px, #9b3968);
 
     box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, .4);
+    cursor: pointer;
 }
 
 .button:hover a {
@@ -1082,6 +1077,8 @@ main .servises .emotionalDesign {
 
 .contacts .contaktus form {
     margin-top: 40px;
+    position: relative;
+    z-index: 2;
 }
 
 .contacts .contaktus [placeholder] {
@@ -1199,6 +1196,7 @@ main .servises .emotionalDesign {
     color: #ccc;
     font: 0.8em HurmeGeomB, Arial, sans-serif;
     letter-spacing: 0.05em;
+    cursor: pointer;
 }
 
 [placeholder="Message"]+div {
