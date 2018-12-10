@@ -1,10 +1,9 @@
-/*@import url('animatepage.css');*/
 @import url('modal.css');
 
 /*Подключение шрифтов*/
 @font-face{
-    font-family: HurmeGeom;
-    src: url('../fonts/HurmeGeometricSans1.otf');
+    font-family: LatoM;
+    src: url('../fonts/Lato-Medium.woff2');
 }
 
 @font-face{
@@ -13,8 +12,8 @@
 }
 
 @font-face{
-    font-family: HurmeGeomB;
-    src: url('../fonts/HurmeGeometricSans1Bold.otf');
+    font-family: LatoB;
+    src: url('../fonts/Lato-Bold.woff2');
 }
 
 @font-face{
@@ -27,7 +26,7 @@ html,
 body {
     margin: 0px;
     padding: 0px;
-    font-family: HurmeGeom, Arial, sans-serif;
+    font-family: LatoM, Arial, sans-serif;
     background-color: #3c3c3c;
 }
 
@@ -564,6 +563,40 @@ main {
    
 }
 
+/*Оформление контента первой страницы*/
+.presentation h2{
+    padding: 15vh 0;
+    margin: 0;
+    font-size: 2em;
+}
+.course ul{
+    margin-bottom: 5vh;
+}
+.course li{
+    font: 1em LatoB, Arial, sans-serif;
+    font-weight:  bold;
+    letter-spacing: 1px;
+    padding: 1vh 0;
+    position: relative;
+}
+.course li a{
+    display: inline-block;
+    padding-left: 18px;
+}
+.course li a::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+}
+
+
+
 /* Оформление кнопки About us*/
 .content{
     position: relative;
@@ -578,12 +611,13 @@ main {
     position: absolute;
     right: 0;
     top: -5vh;
-  
+    z-index: -1;
 
 }
 
 #canvas{
     width: 800px;
+
 }
 
 
@@ -906,7 +940,7 @@ p {
 
 /*оформление 3ей страницы*/
 .this_page {
-    font: 1em HurmeGeomB, Arial, sans-serif;
+    font: 1em LatoB, Arial, sans-serif;
     color: #fff;
 }
 
