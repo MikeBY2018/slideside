@@ -1,4 +1,4 @@
-var canvas;
+var canvas1;
 var context;
 var screenH;
 var screenW;
@@ -11,13 +11,13 @@ $('document').ready(function() {
 	screenH = $(window).height();
 	screenW = $(window).width();
 	
-	// Get the canvas
-	canvas = $('#space');
+	// Get the canvas1
+	canvas1 = $('#space');
 	
-	// Fill out the canvas
-	canvas.attr('height', screenH);
-	canvas.attr('width', screenW);
-	context = canvas[0].getContext('2d');
+	// Fill out the canvas1
+	canvas1.attr('height', screenH);
+	canvas1.attr('width', screenW);
+	context = canvas1[0].getContext('2d');
 	
 	// Create all the stars
 	for(var i = 0; i < numStars; i++) {
@@ -37,7 +37,7 @@ $('document').ready(function() {
 });
 
 /**
- * Animate the canvas
+ * Animate the canvas1
  */
 function animate() {
 	context.clearRect(0, 0, screenW, screenH);
@@ -77,7 +77,7 @@ Star.prototype.draw = function() {
 	// Save the context
 	context.save();
 	
-	// move into the middle of the canvas, just to make room
+	// move into the middle of the canvas1, just to make room
 	context.translate(this.x, this.y);
 	
 	// Change the opacity

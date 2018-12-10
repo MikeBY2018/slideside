@@ -28,8 +28,6 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: HurmeGeom, Arial, sans-serif;
-    /*height: 100vh;*/
-	
     background-color: #3c3c3c;
 }
 
@@ -43,7 +41,8 @@ ul{
 /*настройка блоков отображения*/
 /*подложки на страницах*/
 .backg1, .backg2, .backg3, .backg4, {
-    
+    position: relative;
+    z-index: -1;
 
 }
 
@@ -81,141 +80,24 @@ ul{
     padding: 0 10px;
 }
 
-canvas {
+#space{
     position: fixed;
     bottom: 0;
     left: 0;
+    z-index: 0;
+    /*-webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);*/
 }
 
-/*PopUp block
-
-
-.modal-overlay {
-    width: 100vw;
-    background-color: rgba(0, 0, 0, .6);
+#space1{
     position: fixed;
-    top: 0;
     bottom: 0;
     left: 0;
-    right: 0;
-    margin: auto;
-    display: none;
-    z-index: 100;
-    color: #fff;
+    z-index: 0;
 }
 
-.modal {
-    max-width: 1000px;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    -o-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin: 10vh auto;
-    justify-content: center;
-}
-
-.modal>div {
-    min-width: 300px;
-    flex: 1 1 45%;
-    min-height: 230px;
-    margin: 1.5%;
-    background-color: #fff;
-	position: relative;
-	overflow: hidden;
-
-	background-size: cover;
-	background-position: center;
-
-	-webkit-transition-property: background-position;
-	-o-transition-property: background-position;
-	transition-property: background-position;
-
-	-webkit-transition-duration: 400ms;
-	-o-transition-duration: 400ms;
-	transition-duration: 400ms;
-
-}
-.modal > div:after{
-	content: 'MAIN CODE';
-	line-height: 2em;
-	display: block;
-	width: 80px;
-	height: 300px;
-	position: absolute;
-	top: 0;
-	left: -200px;	
-	opacity: 1;
-	text-shadow: 1px 2px 2px #000;
-	
-	-webkit-transition-property: transform;
-	-o-transition-property: transform;
-	transition-property: transform;
-
-	-webkit-transition-duration: 400ms;
-	-o-transition-duration: 400ms;
-	transition-duration: 400ms;
-
-	-webkit-transform: skew(50deg);
-	-ms-transform: skew(50deg);
-	-o-transform: skew(50deg);
-	transform: skew(50deg);
-}
-.content-portfolio-block > div:hover:after{
-	transform: translate(770%);
-}*/
-
-
-
-
-
-
-
-.page41 {
-    background-image: url('../img/page41.jpg');
-}
-.page41:after{
-    background-image: radial-gradient(circle closest-side at 50% 20%, #4b2c55 5%, #2b2040 180%, rgba(255,255,255,0.1) 300%);
-}
-.page41:hover{
-    background-position: 0px 5vh;
-}
-
-.page42{
-    background-image: url('../img/page42.jpg');
-}
-.page42:after{
-    background-image: radial-gradient(circle closest-side at 50% 20%, #5e3148 5%, #290e21 180%, rgba(255,255,255,0.1) 300%);
-}
-.page42:hover{
-    background-position: -5vh 0px;
-}
-
-.page43 {
-    background-image: url('../img/page43.jpg');
-}
-.page43:after{
-    background-image: radial-gradient(circle closest-side at 50% 20%, #173c59 5%, #0c2132 180%, rgba(255,255,255,0.1) 300%);
-}
-.page43:hover{
-    background-position: 5vh 0px;
-}
-
-.page44 {
-    background-image: url('../img/page44.jpg');
-}
-.page44:after{
-    background-image: radial-gradient(circle closest-side at 50% 20%, #4b2c55 5%, #2b2040 180%, rgba(255,255,255,0.1) 300%);
-}
-.page44:hover{
-    background-position: 0px -5vh;
-}
-/*окончание блока PopUp*/
 
 
 .hidden {
@@ -228,18 +110,21 @@ canvas {
 /*путешествие букв на фоне*/
 .maincode {
     position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     min-height: 85vh;
-    max-width: 100%;
-    top: 5vh;
+    width: 100px;
+    
     font: 1.4em HurmeGeomSB, Arial, sans-serif;
     z-index: 0;
 }
-.main {
+.mainWord {
 
 }
-.code {
+.codeWord {
     position: relative;
-    top: 70vh;
+    top: 72vh;
 }
 .maincode span {
     display: inline-block;
@@ -635,11 +520,14 @@ li {
 
 /*--------Оформление шапки*/
 header, footer{
-   /* background: rgba(0,0,0,0.4);*/
+    /*background: rgba(0,0,0,0.4);*/
     z-index: 10;
     position: fixed;
-    width: 100%;
-    min-height: 15vh;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 90%;
+    min-height: 10vh;
 
 }
 header{
@@ -670,22 +558,39 @@ nav li {
 main {
     position: relative; 
     z-index: 9;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    justify-content: center;
-    min-height: 70vh;
-    padding: 15vh 0;
+ 
+    min-height: 80vh;
+    padding: 10vh 0;
    
 }
 
 /* Оформление кнопки About us*/
-main #about {
-    align-self: flex-end;
+.content{
     position: relative;
-    left: -20vw;
+    color: #ccc;
+    
+}
+.presentation{
+    max-width: 400px;
+}
+
+.ilustration{
+    position: absolute;
+    right: 0;
+    top: -5vh;
+  
+
+}
+
+#canvas{
+    width: 800px;
+}
+
+
+#about {
+   /* align-self: flex-end;*/
+    position: relative;
+    z-index: 3;
 }
 
 .button {
@@ -755,7 +660,7 @@ footer {
 
 
 .social{
-    padding-top: 5vh;
+
 }
 /* Effect bottom border enlarge */
 nav a {
@@ -815,7 +720,7 @@ a:hover {
 }
 
 /*оформление 2ой страницы*/
-main .features {
+.features_list{
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -827,76 +732,136 @@ main .features {
     -o-flex-wrap: wrap;
     flex-wrap: wrap;
     justify-content: center;
+    
+
     max-width: 720px;
+    margin: 10vh auto;
 }
 
-main .features>div {
+.features_list > .features_item{
     box-sizing: border-box;
     flex: 1 1 250px;
     text-align: center;
     font-size: .8em;
+    position: relative;
+    overflow: hidden;
 
     letter-spacing: 1px;
     color: #fff;
-    padding: 15px 15px;
-    margin-bottom: 5px;
+    
+    margin: 5px;
     cursor: pointer;
     min-width: 200px;
 
-    transition: all 500ms ease-in-out;
-}
-
-.firstops {
-    -webkit-animation: textOpacity 5s ease 500ms 2 normal backwards;
-    -o-animation: textOpacity 5s ease 500ms 2 normal backwards;
-    animation: textOpacity 5s ease 500ms 2 normal backwards;
-}
-
-.secondops {
-    -webkit-animation: textOpacity 5s ease 1000ms 2 normal backwards;
-    -o-animation: textOpacity 5s ease 1000ms 2 normal backwards;
-    animation: textOpacity 5s ease 1000ms 2 normal backwards;
-}
-
-.thirdops {
-    -webkit-animation: textOpacity 5s ease 1500ms 2 normal backwards;
-    -o-animation: textOpacity 5s ease 1500ms 2 normal backwards;
-    animation: textOpacity 5s ease 1500ms 2 normal backwards;
-}
-
-.fourthops {
-    -webkit-animation: textOpacity 5s ease 2000ms 2 normal backwards;
-    -o-animation: textOpacity 5s ease 2000ms 2 normal backwards;
-    animation: textOpacity 5s ease 2000ms 2 normal backwards;
+    -webkit-box-shadow: 0.2em 0.2em 2px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0.2em 0.2em 2px rgba(0,0,0,0.3);
+    -o-box-shadow: 0.2em 0.2em 2px rgba(0,0,0,0.3);
+    box-shadow: 0.2em 0.2em 2px rgba(0,0,0,0.3);
 }
 
 
-/*Анимация появления текста*/
-@keyframes textOpacity {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-/*----------*/
-
-
-main .features>div:first-child {
+.features_item > .image{
     background-color: #f48244;
+     -webkit-transition: .5s linear;
+    -o-transition: .5s linear;
+    -moz-transition: .5s linear;
+    transition: .5s linear;
 }
-
-main .features>div:first-child h2,
-main .features>div:last-child h2 {
+/*
+.features_list>div:first-child h2,
+.features_list>div:last-child h2 {
     color: rgba(0, 0, 0, .3);
 }
 
-main .features>div:last-child {
+.features_list>div:last-child {
     background-color: #43d8de;
+}*/
+
+.features_item .image::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /*z-index: 2;*/
+    border: 1px solid rgba(255,255,255,.1);
+    -webkit-transition: .5s linear;
+    -o-transition: .5s linear;
+    -moz-transition: .5s linear;
+    transition: .5s linear;
 }
+.features_item .image{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+}
+.features_item .image > .features_bg{
+    opacity: 0;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    -moz-transition: .5s;
+    transition: .5s;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;    
+}
+.features_item .image:hover > .services_bg{
+    opacity: 1;
+}
+.features_item .hovered{
+    -webkit-transition: .5s linear;
+    -o-transition: .5s linear;
+    -moz-transition: .5s linear;
+    transition: .5s linear;
+}
+.features_item .hoveredvis{
+    padding: 20px;
+}
+.features_item ul{
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    -webkit-transition: .5s linear;
+    -o-transition: .5s linear;
+    -moz-transition: .5s linear;
+    transition: .5s linear;
+}
+.features_item ul li{
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+.features_item ul > li > a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+.features_item ul > li > a:hover{
+    text-decoration: underline;
+}
+.features_item:hover .hovered ul{opacity: 1;top: 18%;}
+
+
+.features_item .hovered ul , .features_item:hover > .image img{
+   /* opacity: 0;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    -moz-transition: .5s;
+    transition: .5s;*/
+}
+
+.features_item:hover .hoveredvis{opacity: 0;}
+.features_item:hover > .image{background: #6d1a62;}
+.features_item:hover > ::before{
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+}
+
 
 h2 {
     margin: 10px 0;
@@ -907,7 +872,7 @@ p {
 }
 
 /*наведение на блоки с текстом*/
-.features>div:hover {
+/*.features>div:hover {
     transform: scale(1.06);
     -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
@@ -921,7 +886,7 @@ p {
 .features>div:first-child:hover h2,
 .features>div:last-child:hover h2 {
     color: rgba(255, 255, 255, 1);
-    /**/
+    
 }
 
 .features>div:first-child+div:hover {
@@ -935,8 +900,8 @@ p {
 .features>div:first-child+div:hover h2,
 .features>div:nth-last-child(2):hover h2 {
     color: rgba(0, 0, 0, 0.3);
-    /**/
-}
+   
+}*/
 
 
 /*оформление 3ей страницы*/
@@ -1372,22 +1337,16 @@ main .servises .emotionalDesign {
 
 /*медиа-запросы*/
 
-@media screen and (min-width: 960px) {
-   /* body>div {
-        min-height: 100vh;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
+@media screen and (max-width: 550px) {
 
-    .container {
-        height: 100vh;
-        overflow: hidden;
+    .backg1, .backg2, .backg3, .backg4, {
+      overflow-x: hidden;
+  }
+    #canvas{
+        width: 50%;
     }
-
-    #content-portfolio {
-        height: 100vh;
-    }*/
+    main{
+    overflow-x: hidden;
 }
 
 @media screen and (max-width: 420px) {
