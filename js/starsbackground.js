@@ -1,4 +1,4 @@
-var canvas1;
+var canvas;
 var context;
 var screenH;
 var screenW;
@@ -11,19 +11,19 @@ $('document').ready(function() {
 	screenH = $(window).height();
 	screenW = $(window).width();
 	
-	// Get the canvas1
-	canvas1 = $('#space');
+	// Get the canvas
+	canvas = $('#space');
 	
-	// Fill out the canvas1
-	canvas1.attr('height', screenH);
-	canvas1.attr('width', screenW);
-	context = canvas1[0].getContext('2d');
+	// Fill out the canvas
+	canvas.attr('height', screenH);
+	canvas.attr('width', screenW);
+	context = canvas[0].getContext('2d');
 	
 	// Create all the stars
 	for(var i = 0; i < numStars; i++) {
 		var x = Math.round(Math.random() * screenW);
 		var y = Math.round(Math.random() * screenH);
-		var length = 1 + Math.random() * 2;
+		var length = 1 + Math.random() * 2; //размер звёзд --> длинна их ног
 		var opacity = Math.random();
 		
 		// Create a new star and draw
@@ -34,10 +34,12 @@ $('document').ready(function() {
 	}
 	
 	setInterval(animate, 1000 / fps);
+
+	
 });
 
 /**
- * Animate the canvas1
+ * Animate the canvas
  */
 function animate() {
 	context.clearRect(0, 0, screenW, screenH);
@@ -59,7 +61,7 @@ function Star(x, y, length, opacity) {
 	this.y = parseInt(y);
 	this.length = parseInt(length);
 	this.opacity = opacity;
-	this.factor = 1;
+	this.factor = 2;
 	this.increment = Math.random() * .03;
 }
 
@@ -77,7 +79,7 @@ Star.prototype.draw = function() {
 	// Save the context
 	context.save();
 	
-	// move into the middle of the canvas1, just to make room
+	// move into the middle of the canvas, just to make room
 	context.translate(this.x, this.y);
 	
 	// Change the opacity
@@ -104,9 +106,9 @@ Star.prototype.draw = function() {
 	}
 	context.lineTo(0, this.length);
 	context.closePath();
-	context.fillStyle = "rgba(255, 255, 200, " + this.opacity + ")";
+	context.fillStyle = "rgba(200, 180, 250, " + this.opacity + ")"; //заливка звезд
 	context.shadowBlur = 5;
-	context.shadowColor = '#ffff33';
+	context.shadowColor = '#ffff33';//оттенок звезд было- #ffff33;
 	context.fill();
 	
 	context.restore();

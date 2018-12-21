@@ -6,9 +6,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/styles.css">
-	<link rel="stylesheet" href="css/onepage-scroll.css">
 </head>
 <body>
 	
@@ -57,14 +55,14 @@
     				</label>	
     			</div>
 				<ul class="cl-effect-4">
-					<li><a href="#page_02">Курсы</a></li>
-					<li><a href="#" id="portfolio">Работы выпускников
+					<li><a href = '#page_02' id="course">Курсы</a></li>
+					<li><a id="portfolio">Работы выпускников
 							<svg class = "pin">
 								<use xlink:href="#icon-down"></use>
 							</svg>
 						</a>
 					</li>
-					<li><a href="#page_04">Контакты
+					<li><a id="contacts">Контакты
 							<svg class = "pin">
 								<use xlink:href="#icon-onward"></use>
 							</svg>
@@ -103,8 +101,8 @@
 						</main>						
 					</div>
 				</div>
-		
 			</section>
+			
 			<section class="background backg2" id = "page_02">
 				<div class="container content-wrapper">		
 					<div class="wrapper">
@@ -200,7 +198,6 @@
 						</main>							
 					</div>	
 				</div>
-			
 			</section>
 			<section class="background backg3" id = "page_03">
 				<div class="container content-wrapper">		
@@ -223,8 +220,43 @@
 							<!-- <div id="content-portfolio"></div> -->
 							<div id="windowSlider">
 								<div class="servises" id="viewport">
-									<ul id="slidewrapper">
+									<ul class="owl-carousel owl-theme">
 										<li class="uxui">
+											<h2>UI/UX Design</h2>
+											<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point using Lorem ipsum is that it has a more-or-less normal</p>
+											<a href="http://google.com">Read more
+												<svg class = "icon-read icon-pos" width="50" height="16" viewBox="30 0 150 40">
+													<use xlink:href="#icon-read"></use>
+												</svg>
+											</a>
+										</li>
+										<li class="branding">
+											<h2>Branding</h2>
+											<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point using Lorem ipsum is that it has a more-or-less normal</p>
+											<a href="http://google.com">Read more
+												<svg class = "icon-read icon-pos" width="50" height="16" viewBox="30 0 150 40">
+													<use xlink:href="#icon-read"></use>
+												</svg>
+											</a>
+										</li>
+										<li class="logoDesign">
+											<h2>Logo design</h2>
+											<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point using Lorem ipsum is that it has a more-or-less normal</p>
+											<a href="http://google.com">Read more
+												<svg class = "icon-read icon-pos" width="50" height="16" viewBox="30 0 150 40">
+													<use xlink:href="#icon-read"></use>
+												</svg>
+											</a>
+										</li>
+										<li class="emotionalDesign">
+											<h2>Emotional design</h2>
+											<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point using Lorem ipsum is that it has a more-or-less normal</p>
+											<a href="http://google.com">Read more
+												<svg class = "icon-read icon-pos" width="50" height="16" viewBox="30 0 150 40">
+													<use xlink:href="#icon-read"></use>
+												</svg>
+											</a>
+										</li><li class="uxui">
 											<h2>UI/UX Design</h2>
 											<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point using Lorem ipsum is that it has a more-or-less normal</p>
 											<a href="http://google.com">Read more
@@ -298,9 +330,11 @@
 					</div>	
 				</div>
 			</section>
-						<!--Мерцающий фон-->
+
+			<!--Мерцающий фон-->
 			<canvas id="space"></canvas>
 		</div>
+		
 		<div class ="modal-overlay">
 			<div class="modal">
 				<a class="close-modal">
@@ -314,7 +348,7 @@
 		<footer>
 			<!--Нумерация страницы и навигация между страницами-->
 			<div class="wrapper">
-			<!-- 	<div class="pages">
+			<!-- <div class="pages">
 					<a href="#index" data-number-pages = "01/04"></a>
 					<a href="#page_02"></a>
 					<a href="#page_03"></a>
@@ -342,28 +376,27 @@
 
 
 	
-	<script src = "https://code.jquery.com/jquery-3.3.1.min.js"></script>
-	
+	<script src = "https://code.jquery.com/jquery-3.3.1.min.js"></script>	
 	<script src = "js/jquery.onepage-scroll.min.js"></script>
+	<script src = "js/owl.carousel.min.js"></script>
 
-	<script src = "js/starsbackground.js"></script> 
 	<script src = "js/scroll.js"></script>
-	
-
-		
-	<script src = "js/toggle.js"></script>
-	
-
-	<script src = "js/loading.js"></script>
-	<script src = "js/modal.js"></script>
-
-	<script src = "js/slider.js"></script>
+	<script src = "js/starsbackground.js"></script> 
 
 	
+	 
+	<!--  -->
 
-	<script src = "js/toabout.js"></script>
+	
+	
+	
 	<script src = "js/main.js"></script>
+	<!-- <script src = "js/brain.js"></script>		 -->
+	
 
-	<!--<script src = "js/brain.js"></script>*/-->
+	
+
+	
+
 </body>
 </html>

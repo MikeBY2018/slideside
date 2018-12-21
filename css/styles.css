@@ -1,4 +1,8 @@
 @import url('modal.css');
+@import url('animate.css');
+@import url('onepage-scroll.css');
+@import url('owl.carousel.min.css');
+@import url('owl.theme.default.min.css');
 
 /*Подключение шрифтов*/
 @font-face{
@@ -7,19 +11,11 @@
 }
 
 @font-face{
-    font-family: HurmeGeomThin;
-    src: url('../fonts/HurmeGeometricSans1Thin.otf');
-}
-
-@font-face{
     font-family: LatoB;
     src: url('../fonts/Lato-Bold.woff2');
 }
 
-@font-face{
-    font-family: HurmeGeomSB;
-    src: url('../fonts/HurmeGeometricSans1%20SemiBold.otf');
-}
+
 
 /*Сброс основных обёрток и установка шрифта*/
 html,
@@ -84,10 +80,6 @@ ul{
     bottom: 0;
     left: 0;
     z-index: 0;
-    /*-webkit-transform: translateY(100%);
-    -ms-transform: translateY(100%);
-    -o-transform: translateY(100%);
-    transform: translateY(100%);*/
 }
 
 #space1{
@@ -273,7 +265,7 @@ ul{
     }
 }
 
-/*--*/
+
 
 @keyframes letterC {
     0% {
@@ -388,6 +380,7 @@ a {
     display: inline-block;
     text-decoration: none;
     color: #999;
+    cursor: pointer;
     position: relative;    /*для того чтобы позиционировать стрелки после надписи ссылки*/
 }
 
@@ -610,19 +603,20 @@ main {
 .ilustration{
     position: absolute;
     right: 0;
-    top: -5vh;
-    z-index: -1;
+    top: -15vh;
+  
 
 }
 
 #canvas{
-    width: 800px;
-
+    width: 600px;
+    height: 800px;
 }
 
 
 #about {
    /* align-self: flex-end;*/
+    max-width: 250px;
     position: relative;
     z-index: 3;
 }
@@ -944,67 +938,64 @@ p {
     color: #fff;
 }
 
-main .servises {}
+.servises {}
 
-main .servises li {
-    padding: 99px 25px 30px;
+.servises li {
+    /*padding: 99px 25px 30px;*/
 }
 
-main .servises li h2 {
+.servises li h2 {
     font: 40px HurmeGeomB, Arial, sans-serif;
 
 }
 
-main .servises li p {
+.servises li p {
     font-size: 0.8em;
     padding: 15px 0 25px 0;
     max-width: 400px;
 }
 
-main .servises li a {
+.servises li a {
     position: relative;
     color: #ccc;
     border: 1px solid #ccc;
     padding: 10px 20px;
 }
 
-main .servises li a:hover {
+.servises li a:hover {
     border: 1px solid #fff;
     color: #fff;
 }
 
-main .servises li {
+.servises li {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-main .servises .uxui {
+.servises .uxui {
     background-image: url(../img/Slide1.jpg);
 }
 
-main .servises .branding {
+.servises .branding {
     background-image: url(../img/Slide2.jpg);
 }
 
-main .servises .logoDesign {
+.servises .logoDesign {
     background-image: url(../img/Slide3.jpg);
 }
 
-main .servises .emotionalDesign {
+.servises .emotionalDesign {
     background-image: url(../img/Slide4.jpg);
 }
 
 #windowSlider {
     color: #fff;
-    width: 700px;
-    margin: 7vh 0;
-    overflow: hidden;
+    /*width: 700px;*/
+    /*margin: 7vh 0;*/
 }
 
-#slidewrapper {
-    transition: 1s ease-in;
-}
+
 
 /*Оформление AboutUS стр*/
 
@@ -1381,8 +1372,8 @@ main .servises .emotionalDesign {
     }
     main{
     overflow-x: hidden;
+    }
 }
-
 @media screen and (max-width: 420px) {
     nav a {
         margin-left: 10px;
@@ -1407,7 +1398,7 @@ main .servises .emotionalDesign {
  
     /* Для меню */
     .cl-effect-4{display: block;}
-
+    
     header nav{
         flex-direction: column;
         min-height: auto;

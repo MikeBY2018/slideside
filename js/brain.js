@@ -23,15 +23,25 @@
         };
 }());
 
+function ref(fn){
+    window.cancelAnimationFrame(function(){
+        window.cancelAnimationFrame(function(){
+            fn();
+        });
+    });
+}
+
+
+
 var Nodes = {
 
 
-    density: 12,
+    density: 15,
 
-    drawDistance: 25,
+    drawDistance: 22,
     baseRadius: 2,
     maxLineThickness: 4,
-    reactionSensitivity: 3,
+    reactionSensitivity: 5,
     lineThickness: 0.4,
 
     points: [],
@@ -53,8 +63,8 @@ var Nodes = {
         this.canvas = document.getElementById( 'canvas' );
         this.context = canvas.getContext( '2d' );
         this.context.globalCompositeOperation = "lighter";
-        this.canvas.width = 800;
-        this.canvas.height = 600;
+        this.canvas.width = 600;
+        this.canvas.height = 800;
         this.canvas.style.display = 'block';
 
         this.imageInput = document.createElement( 'input' );
@@ -207,8 +217,6 @@ var Nodes = {
         this.bgImage.src = data;
 
         this.bgImage.onload = function() {
-
-
             Nodes.drawImageToBackground();
         }
     },
@@ -270,4 +278,4 @@ var Nodes = {
 
 setTimeout( function() {
     Nodes.init();
-}, 10 );
+}, 20 );
