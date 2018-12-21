@@ -603,10 +603,135 @@ main {
 .ilustration{
     position: absolute;
     right: 0;
-    top: -15vh;
-  
-
+    max-width: 50vw;
 }
+.welcome-box-circle-content{
+    position: relative;    
+
+    width: 100%;
+    text-align: center;
+}
+.welcome-box-circle-content svg{
+    vertical-align: middle;
+}
+.welcome-box-circle-content .shield{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.welcome-box-circle-content .circle-icon{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    animation: welcome-box-circle-icon-rotating;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    z-index: 2;
+    
+}
+.welcome-box-circle-content .circle-icon.circle-icon-lock{
+    animation-duration: 30s;
+}
+.welcome-box-circle-content .circle-icon.circle-icon-eye{
+    animation-duration: 12s;
+}
+
+.welcome-box-circle-content .circle-icon.circle-icon-fingerprint{
+    animation-duration: 20s;
+}
+
+.welcome-box-circle-content .circle-icon i{
+    background-image: linear-gradient(142deg,#5772fa,#011341);
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
+.welcome-box-circle-content .circle-icon i.lock{
+    top: 375px;
+    left: 5px;
+    -webkit-animation: welcome-box-circle-icon-reverse 30s linear infinite;
+    -o-animation: welcome-box-circle-icon-reverse 30s linear infinite;
+    animation: welcome-box-circle-icon-reverse 30s linear infinite;
+}
+.welcome-box-circle-content .circle-icon i.eye{
+    top: 130px;
+    left: 130px;
+    -webkit-animation: welcome-box-circle-icon-reverse 12s linear infinite;
+    -o-animation: welcome-box-circle-icon-reverse 12s linear infinite;
+    animation: welcome-box-circle-icon-reverse 12s linear infinite;
+}
+.welcome-box-circle-content .circle-icon i.fingerprint{
+    top: 350px;
+    left: 210px;
+    -webkit-animation: welcome-box-circle-icon-reverse 20s linear infinite;
+    -o-animation: welcome-box-circle-icon-reverse 20s linear infinite;
+    animation: welcome-box-circle-icon-reverse 20s linear infinite;
+}
+
+
+@-webkit-keyframes welcome-box-circle-icon-rotating {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes welcome-box-circle-icon-rotating {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}
+
+@-webkit-keyframes welcome-box-circle-icon-reverse {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    to {
+        -webkit-transform: rotate(-1turn);
+        transform: rotate(-1turn)
+    }
+}
+
+@keyframes welcome-box-circle-icon-reverse {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    to {
+        -webkit-transform: rotate(-1turn);
+        transform: rotate(-1turn)
+    }
+}
+
 
 #canvas{
     width: 600px;

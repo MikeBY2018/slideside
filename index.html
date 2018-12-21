@@ -40,6 +40,23 @@
 					<line x1="0" y1="20" x2="140" y2="20" stroke-width="3" />
 					<polygon points="145,20 130,35 130,5" stroke-width="3" />	
 				</symbol>
+
+				<symbol viewBox="0 0 27 27" id="welcome-box-fingerprint" width="100%" height="100%">
+					<g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-linecap="round" stroke-width="1.6">
+						<path d="M10.352 16.556c0-.834-.185-1.945-.185-2.87 0-1.39.463-2.593 2.685-2.779 6.667-.648 3.889 13.056 3.24 14.352M7.667 24.611c1.11-2.037 1.759-3.518 1.944-4.722M8.222 9.889C6.37 11.926 6.37 14.704 6.556 16.74c.185 1.852.277 2.963-1.667 5.648"></path>
+						<path d="M20.444 22.76c.926-9.908-1.481-15.464-7.314-15.556-1.204 0-2.315.463-3.149 1.11M3.13 6.74c1.944-2.777 5-5.462 9.722-5.462M1.185 15.352c-.092-.463-.092-1.019-.092-1.482 0-1.574.277-3.055.833-4.444M19.148 2.667a12.833 12.833 0 0 1 2.87 2.13c.741.74 1.39 1.48 1.852 2.407a12.05 12.05 0 0 1 1.574 4.074M6.833 7.111C5.63 8.222 4.89 9.241 4.426 11.833 3.5 16.37 4.889 16 2.759 18.778M17.574 4.889C14.704 3.407 11 3.778 8.5 5.537M23.685 19.611s.648-8.796-4.166-13.055M13.222 21.278c.741-4.26.185-7.5.185-7.5M12.019 25.537s.37-.278.648-1.574"></path>
+					</g>
+				</symbol>
+				<symbol viewBox="0 0 30 15" id="welcome-box-eye" width="100%" height="100%">
+					<g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-linecap="round" stroke-width="1.6">
+						<path d="M1.262 7.24S7.038 13.307 15 13.307c7.962 0 13.825-6.067 13.825-6.067S22.962 1.173 15 1.173C7.037 1.173 1.262 7.24 1.262 7.24z"></path>
+						<ellipse cx="15" cy="7.24" rx="3.15" ry="3.12"></ellipse>
+					</g>
+				</symbol>
+				<symbol viewBox="0 0 14 22" id="welcome-box-lock" width="100%" height="100%">
+					<path fill="#FFF" fill-rule="evenodd" d="M10.588 8.008V3.52C10.588 1.584 9 0 7.058 0 5.119 0 3.53 1.584 3.53 3.52v4.488C1.412 9.24 0 11.528 0 14.08c0 3.872 3.176 7.04 7.059 7.04 3.882 0 7.059-3.168 7.059-7.04 0-2.552-1.412-4.84-3.53-6.072zm0-.088c0 .088-.088 0-.088 0h.088zm-5.294-4.4c0-.968.794-1.76 1.765-1.76.97 0 1.765.792 1.765 1.76v3.784a5.703 5.703 0 0 0-1.765-.264c-.618 0-1.235.088-1.765.264V3.52zM3.53 7.92h.089s0 .088-.089 0zm3.53 11.44c-2.912 0-5.294-2.376-5.294-5.28 0-2.904 2.382-5.28 5.294-5.28 2.912 0 5.294 2.376 5.294 5.28 0 2.904-2.382 5.28-5.294 5.28zm0-7.04c-.53 0-.883.352-.883.88v1.76c0 .528.353.88.883.88s.882-.352.882-.88V13.2c0-.44-.353-.88-.882-.88z">			
+					</path>
+				</symbol>
 			</svg>
 			<!--Основная навигация в шапке-->
 			<nav class = "wrapper">
@@ -79,7 +96,35 @@
 						<main>
 							<div class="content clearfix">
 								<div class="ilustration">
-									<canvas id = "canvas"></canvas>
+									<div class="welcome-box-circle" >
+										<div class="welcome-box-circle-content">
+											<img src="img/welcome-box-circle-lines.svg" alt="2FAS Welcome" class="lines">
+											<img src="img/welcome-box-shield.svg" alt="2FAS Shield" class="shield">
+											
+											<div class="circle-icon circle-icon-lock">
+												<i class="lock">
+													<svg viewBox="0 0 14 22" width="14px" height="22px">
+														<use xlink:href="#welcome-box-lock"></use>
+													</svg>
+												</i>
+											</div>
+											<div class="circle-icon circle-icon-eye">
+												<i class="eye">										
+													<svg viewBox="0 0 30 15" width="30px" height="15px">
+														<use xlink:href="#welcome-box-eye"></use>
+													</svg>
+												</i>	
+											</div>
+											<div class="circle-icon circle-icon-fingerprint">
+												<i class="fingerprint">
+													<svg viewBox="0 0 27 27" width="27px" height="27px">
+														<use xlink:href="#welcome-box-fingerprint"></use>
+													</svg>
+												</i>
+											</div>
+											
+										</div>
+									</div>
 								</div>
 								<div class="presentation">
 									<h2>IT курсы в Минске</h2>
