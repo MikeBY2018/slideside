@@ -84,14 +84,6 @@ svg{
     z-index: 0;
 }
 
-#space1{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 0;
-}
-
-
 
 .hidden {
     position: absolute;
@@ -389,19 +381,18 @@ a {
 .icon {
     width: 35px;
     height: 35px;
-    margin-right: 5px;
+    /*margin-right: 5px;*/
     fill: currentColor;
 }
 svg.icon.icon-vk{
     height: 33px;
     margin-bottom: -1px;
-    margin-right: -1px;
 }
 svg.icon.icon-linkedin{
 
 }
 svg.icon.icon-inst{
-    width: 25px;
+    width: 22px;
 }
 .icon-read {
     width: 50px;
@@ -572,7 +563,7 @@ main {
 .presentation h2{
     padding: 15vh 0;
     margin: 0;
-    font-size: 2em;
+    font-size: 2.4em;
 }
 .course ul{
     margin-bottom: 5vh;
