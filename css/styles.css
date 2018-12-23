@@ -35,6 +35,9 @@ ul{
 svg{
 
 }
+img{
+    max-width: 100%;
+}
 /*настройка блоков отображения*/
 /*подложки на страницах*/
 .backg1, .backg2, .backg3, .backg4, {
@@ -64,7 +67,7 @@ svg{
     position: relative;
 }
 .container {
-
+   
 }
 .clearfix::after{
     content: '';
@@ -72,16 +75,17 @@ svg{
     display: block;
 }
 .wrapper {
-    max-width: 1180px;
+    max-width: 960px;
     margin: 0 auto;
     padding: 0 10px;
+    /*overflow-x: hidden;*/
 }
 
 #space{
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 0;
+    z-index: 1;
 }
 
 
@@ -467,29 +471,29 @@ li {
     transform-origin: 5%;
 }
 
-.checkbox3:checked + label > .hamburger3 > .bar1{
-    transform: rotate(45deg);
-    height: 3px;
-    width: 42px;
-}
+    .checkbox3:checked + label > .hamburger3 > .bar1{
+        transform: rotate(45deg);
+        height: 3px;
+        width: 42px;
+    }
 
-.checkbox3:checked + label > .hamburger3 > .bar3{
-    transform: rotate(45deg);
-    height: 3px;
-    background-color: transparent;
-}
+    .checkbox3:checked + label > .hamburger3 > .bar3{
+        transform: rotate(45deg);
+        height: 3px;
+        background-color: transparent;
+    }
 
-.checkbox3:checked + label > .hamburger3 > .bar2{
-    transform: rotate(-45deg);
-    height: 3px;
-    background-color: transparent;
-}
+    .checkbox3:checked + label > .hamburger3 > .bar2{
+        transform: rotate(-45deg);
+        height: 3px;
+        background-color: transparent;
+    }
 
-.checkbox3:checked + label > .hamburger3 > .bar4{
-    transform: rotate(-45deg);
-    height: 3px;
-    width: 42px;
-}
+    .checkbox3:checked + label > .hamburger3 > .bar4{
+        transform: rotate(-45deg);
+        height: 3px;
+        width: 42px;
+    }
 
 /*----------------*/
 
@@ -551,22 +555,27 @@ nav li {
 
 /* Оформление тела*/
 main {
-    position: relative; 
+    position: relative;
+    overflow: hidden; 
     z-index: 9;
- 
     min-height: 80vh;
     padding: 10vh 0;
    
 }
+.backg1 main{
+    overflow: hidden;
+    min-height: 100vh;
+    padding: 0;
+}
 
 /*Оформление контента первой страницы*/
 .presentation h2{
-    padding: 15vh 0;
+    padding: 15vh 0 5vh;
     margin: 0;
     font-size: 2.4em;
 }
 .course ul{
-    margin-bottom: 5vh;
+    margin-bottom: 15vh;
 }
 .course li{
     font: 1em LatoB, Arial, sans-serif;
@@ -595,22 +604,33 @@ main {
 
 /* Оформление кнопки About us*/
 .content{
-    position: relative;
+    /*position: relative;*/
+    /*overflow: hidden;*/
     color: #ccc;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-around;
     
 }
 .presentation{
-    max-width: 400px;
+/*    max-width: 50%;
+    flex: 0 1 400px;*/
 }
 
-.ilustration{
+.ilustration{    
+    align-self: center;
+    /*flex: 0 1 400px;
     position: absolute;
-    right: 0;
-    max-width: 50vw;
+    right: 0;*/
+    /*max-width: 450px;*/
+    /*overflow: hidden;*/
 }
 .welcome-box-circle-content{
     position: relative;    
-
+    top: 10vh;
     width: 100%;
     text-align: center;
 }
@@ -669,14 +689,14 @@ main {
     left: 5px;
     -webkit-animation: welcome-box-circle-icon-reverse 30s linear infinite;
     -o-animation: welcome-box-circle-icon-reverse 30s linear infinite;
-    animation: welcome-box-circle-icon-reverse 30s linear infinite;
+    animation: welcome-box-circle-icon-reverse 30s linear infinite; /* */
 }
 .welcome-box-circle-content .circle-icon i.eye{
     top: 130px;
     left: 130px;
-    -webkit-animation: welcome-box-circle-icon-reverse 12s linear infinite;
+   -webkit-animation: welcome-box-circle-icon-reverse 12s linear infinite;
     -o-animation: welcome-box-circle-icon-reverse 12s linear infinite;
-    animation: welcome-box-circle-icon-reverse 12s linear infinite;
+    animation: welcome-box-circle-icon-reverse 12s linear infinite;/* */
 }
 .welcome-box-circle-content .circle-icon i.fingerprint{
     top: 350px;
@@ -743,10 +763,7 @@ main {
 
 
 #about {
-   /* align-self: flex-end;*/
-    max-width: 250px;
-    position: relative;
-    z-index: 3;
+    
 }
 
 .button {
@@ -1489,22 +1506,57 @@ p {
 }
 
 /*медиа-запросы*/
-
+@media screen and (max-width: 960px) {
+    .content{
+       
+    }
+        .ilustration{
+            max-width: 400px;
+            align-self: center;
+        }
+            .welcome-box-circle-content .shield{
+                width: 80px;
+            }
+            .welcome-box-circle-content .circle-icon i{
+                width: 40px;
+                height: 40px;        
+            }
+            .welcome-box-circle-content .circle-icon i.lock{
+                top: 280px;
+                left: 8px;
+            }
+            .welcome-box-circle-content .circle-icon i.eye{
+                top: 125px;
+                left: 125px;
+            }
+            .welcome-box-circle-content .circle-icon i.fingerprint{
+                top: 305px;
+                left: 205px;
+            }
+}
+@media screen and (max-width: 750px){
+    .ilustration{
+        display: none;
+    }
+}
 @media screen and (max-width: 550px) {
 
     .backg1, .backg2, .backg3, .backg4, {
-      overflow-x: hidden;
+        /*overflow-x: hidden;*/
   }
     #canvas{
-        width: 50%;
+        /*width: 50%;*/
     }
     main{
-    overflow-x: hidden;
+    /*;*/
     }
 }
 @media screen and (max-width: 420px) {
     nav a {
         margin-left: 10px;
+    }
+    .presentation h2{
+        font-size: 2em;
     }
 
     main .servises li h2 {
@@ -1515,8 +1567,9 @@ p {
         font-size: 8vw;
     }
 
-    main #about{
-        position: static;
+    .course + div{
+        text-align: center;
+        margin-top: 5vh;
     }
 
     .content-portfolio-block > div:hover:after{
