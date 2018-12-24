@@ -3,6 +3,10 @@
 @import url('onepage-scroll.css');
 @import url('owl.carousel.min.css');
 @import url('owl.theme.default.min.css');
+@import url('remodal.css');
+@import url('remodal-default-theme.css');
+
+
 
 /*Подключение шрифтов*/
 @font-face{

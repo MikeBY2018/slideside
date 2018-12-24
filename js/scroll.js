@@ -3,6 +3,9 @@ $('document').ready(function() {
 	//*подгрузка Portfolio и нажатие на пункт меню. модальное окно
 
   	$('.content_portfolio').load('../work/template/portfolio.html');
+  	$('#teachers').load('../work/template/teachers.html');
+  	$('#photogallery').load('../work/template/photogallery.html');
+  	$('#payment').load('../work/template/payment.html');
 
 	$(function(){
 	  	var elements = $('.modal-overlay, .modal');
