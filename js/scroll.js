@@ -62,6 +62,7 @@ $(".main").onepage_scroll({
 function animateStars(){
 		var classNameBody = document.body.className;
 		var pageClass = $(".cl-effect-4 li a");
+		canvas = $('#space');
 
 
 		var starCanvasHeight;
@@ -81,6 +82,9 @@ function animateStars(){
 			starCanvasHeight = 300;
 			remThisPageClass();
 			pageClass[2].classList.add('this_page');
+		}else if(classNameBody == 'viewing-page-5'){
+			starCanvasHeight = 400;
+			remThisPageClass();
 		}
 		canvas.css({ 
 			'transform': 'translate(0 ,' + starCanvasHeight + '%)',

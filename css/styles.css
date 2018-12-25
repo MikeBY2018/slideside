@@ -913,7 +913,7 @@ a:hover {
     justify-content: center;
     
 
-    max-width: 720px;
+    /*max-width: 720px;*/
     margin: 10vh auto;
 }
 
@@ -1385,7 +1385,7 @@ p {
     /*border: 1px dotted #eee;*/
 }
 
-/*Анимация планеты и комет */
+/*Анимация планеты и комет 
 .adress>div::after {
     content: "";
     display: inline-block;
@@ -1489,7 +1489,7 @@ p {
         transform: translate(35000%, -5000%) scale(0.4);
     }
 }
-
+*/
 /*--------------------------------------*/
 
 .adress h3 {
@@ -1514,6 +1514,9 @@ p {
   /*display: none;  */
 }
 
+.backg5>div{
+    min-height: 100vh;
+}
 /*медиа-запросы*/
 @media screen and (max-width: 960px){
     .content{
