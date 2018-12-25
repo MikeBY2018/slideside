@@ -7,6 +7,7 @@ $('document').ready(function() {
   	$('#photogallery').load('../work/template/photogallery.html');
   	$('#payment').load('../work/template/payment.html');
   	$('#other').load('../work/template/other.html');
+  	$('#welcomepage').load('../work/template/form.html');
 
 	$(function(){
 	  	var elements = $('.modal-overlay, .modal');

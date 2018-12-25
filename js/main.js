@@ -16,6 +16,6 @@ var mainTranslate = document.querySelector('div.main');
 
 
 
-document.getElementById('about').onclick = function(){
-    window.location.href = 'work/about.html';
-}
+// document.getElementById('about').onclick = function(){
+//     window.location.href = 'work/about.html';
+// }
