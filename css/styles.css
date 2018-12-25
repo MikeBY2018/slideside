@@ -43,7 +43,7 @@ img{
 }
 /*настройка блоков отображения*/
 /*подложки на страницах*/
-.backg1, .backg2, .backg3, .backg4, {
+.backg1, .backg2, .backg3, .backg4, .backg5{
     position: relative;
     z-index: -1;
 
@@ -61,9 +61,11 @@ img{
     background-image: radial-gradient(circle closest-side at 50% 10%, #173c59 50px, #0c2132 500px);
 }
 
-.backg4 {
+.backg4, .backg5 {
     background-color: #191921;
 }
+
+
 
 /*Отображение на странице*/
 .slider-page{
@@ -1153,7 +1155,7 @@ p {
 .shadowbox {
     max-width: 860px;
     margin: 0 auto;
-    padding-top: 5vh;
+    padding-top: 3vh;
 }
 
 .contacts {
@@ -1172,39 +1174,39 @@ p {
     overflow: hidden;
 }
 
-.contacts section {
+.contacts div {
     flex: 1 1 270px;
-    padding: 10vh 40px;
+    padding: 2vh 40px;
 }
 
-.contacts section h2 {
+.contacts div h2 {
     font: 1.4em LatoB, Arial, sans-serif;
 }
 
-.contacts section h2+p {
+.contacts div h2+p {
     font: 0.9em LatoB, Arial, sans-serif;
     max-width: 250px;
     margin-bottom: 20px;
     letter-spacing: 0.05vw;
 }
 
-.contacts section>p+p {
+.contacts div>p+p {
     font-size: 0.8em;
     margin-bottom: 30px;
 }
 
-.contacts .aboutus {
+.contacts #map {
     background-color: #ededed;
 }
 
-.contacts .aboutus ul {
+/*.contacts .aboutus ul {
     text-align: center;
 }
 
 .contacts .aboutus ul li {
     display: inline-block;
     margin: 10px 10px;
-}
+}*/
 
 .contacts .contaktus {
     color: #ddc;
@@ -1217,7 +1219,7 @@ p {
 }
 
 .contacts .contaktus form {
-    margin-top: 40px;
+    margin-top: 20px;
     position: relative;
     z-index: 2;
 }
@@ -1246,7 +1248,7 @@ p {
 }
 
 .contacts .contaktus .checkbx {
-    margin: 40px 0 20px;
+    margin: 30px 0 0px;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -1348,7 +1350,7 @@ p {
 
 .contaktus {}
 
-.aboutus:before {
+/*.aboutus:before {
     content: "About";
     font: 20vh/15vh LatoB, Arial, sans-serif;
     position: absolute;
@@ -1366,7 +1368,7 @@ p {
     bottom: 0;
     right: 0;
     z-index: 1;
-}
+}*/
 
 
 
@@ -1379,10 +1381,11 @@ p {
 .adress div {}
 
 #map{
-    box-sizing: border-box;
+   /* box-sizing: border-box;*/
     /*width: 100%;*/
-    height: 200px;
+    height: 413px;
     /*border: 1px dotted #eee;*/
+    padding: 0vh 0px;
 }
 
 /*Анимация планеты и комет 

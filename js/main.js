@@ -1,6 +1,7 @@
 window.onload = function(){
 }
-		
+        
+var about = document.getElementById('about');
 var portfolio = document.getElementById('portfolio');
 var portfolioCo = document.getElementById('modal-overlay');
 var backgSlide = document.getElementsByClassName('background');

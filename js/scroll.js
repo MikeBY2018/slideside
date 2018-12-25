@@ -1,7 +1,7 @@
 $('document').ready(function() {
 
 	//*подгрузка Portfolio и нажатие на пункт меню. модальное окно
-
+	$('.about').load('../work/about.html');
   	$('.content_portfolio').load('../work/template/portfolio.html');
   	$('#teachers').load('../work/template/teachers.html');
   	$('#photogallery').load('../work/template/photogallery.html');
@@ -21,6 +21,22 @@ $('document').ready(function() {
 		    $('#portfolio').removeClass('this_page');
 		});
 	});
+
+
+	/*$(function(){
+		var elements_1 = $('.modal-overlay, .modal');
+	  $('#about').click(function(){
+		  elements_1.addClass('active');
+		  $('#about').addClass('this_page');
+
+	  });
+
+	  $('.close-modal').click(function(){
+		  elements_1.removeClass('active');
+		  $('#about').removeClass('this_page');
+	  });
+  });*/
+
 
   // гамбургер меню
 	$(function(){
