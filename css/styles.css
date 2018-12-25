@@ -1,6 +1,5 @@
 @import url('modal.css');
 @import url('animate.css');
-@import url('onepage-scroll.css');
 @import url('owl.carousel.min.css');
 @import url('owl.theme.default.min.css');
 @import url('remodal.css');
@@ -82,7 +81,6 @@ img{
     max-width: 960px;
     margin: 0 auto;
     padding: 0 10px;
-    /*overflow-x: hidden;*/
 }
 
 #space{
@@ -110,7 +108,7 @@ img{
     min-height: 85vh;
     width: 100px;
     
-    font: 1.4em HurmeGeomSB, Arial, sans-serif;
+    font: 1.4em LatoB, Arial, sans-serif;
     z-index: 0;
 }
 .mainWord {
@@ -423,7 +421,7 @@ li {
 
 #menu_toggle{
     display: none;
-    position: relative;
+    /*position: relative;*/
 }
 
 .visuallyHidden {
@@ -435,11 +433,14 @@ li {
 }
 
 .hamburger {
-    margin-left: auto;
-    margin-top: 30px;
+
+    display: inline-block;
+    margin-top: 10px;
     width: 30px;
     height: 30px;
     position: relative;
+    z-index: 2;
+ 
 }
 
 .hamburger .bar {
@@ -559,7 +560,7 @@ nav li {
 }
 
 /* Оформление тела*/
-main {
+.main_content {
     position: relative;
     overflow: hidden; 
     z-index: 9;
@@ -567,7 +568,7 @@ main {
     padding: 10vh 0;
    
 }
-.backg1 main{
+.backg1 .main_content{
     overflow: hidden;
     min-height: 100vh;
     padding: 0;
@@ -797,7 +798,7 @@ footer {
     
 }
 
-.pages {
+/*.pages {
     float: right;
     text-align: right;
     line-height: 0;
@@ -835,7 +836,7 @@ footer {
     top: 0;
     font-size: 0.8em;
 }
-
+*/
 
 .social{
 
@@ -1020,7 +1021,7 @@ a:hover {
 .features_item ul > li > a:hover{
     text-decoration: underline;
 }
-.features_item:hover .hovered ul{opacity: 1;top: 18%;}
+.features_item:hover .hovered ul{opacity: 1;top: 20%;}
 
 
 .features_item .hovered ul , .features_item:hover > .image img{
@@ -1095,7 +1096,7 @@ p {
 }
 
 .servises li h2 {
-    font: 40px HurmeGeomB, Arial, sans-serif;
+    font: 40px LatoB, Arial, sans-serif;
 
 }
 
@@ -1177,11 +1178,11 @@ p {
 }
 
 .contacts section h2 {
-    font: 1.4em HurmeGeomB, Arial, sans-serif;
+    font: 1.4em LatoB, Arial, sans-serif;
 }
 
 .contacts section h2+p {
-    font: 0.9em HurmeGeomB, Arial, sans-serif;
+    font: 0.9em LatoB, Arial, sans-serif;
     max-width: 250px;
     margin-bottom: 20px;
     letter-spacing: 0.05vw;
@@ -1237,7 +1238,7 @@ p {
     padding-bottom: 10px;
     margin-bottom: 20px;
     width: 100%;
-    font: 0.8em HurmeGeom, Arial, sans-serif;
+    font: 0.8em LatoM, Arial, sans-serif;
 }
 
 .contacts .contaktus [placeholder]:placeholder-shown {
@@ -1265,10 +1266,9 @@ p {
     -ms-flex: 1 1 50%;
     -o-flex: 1 1 50%;
     flex: 1 1 50%;
-    /**/
     min-width: 130px;
     margin-bottom: 20px;
-    font: 0.8em HurmeGeomB, Arial, sans-serif;
+    font: 0.8em LatoB, Arial, sans-serif;
     letter-spacing: 0.09vw;
     position: relative;
 }
@@ -1350,7 +1350,7 @@ p {
 
 .aboutus:before {
     content: "About";
-    font: 20vh/15vh HurmeGeomB, Arial, sans-serif;
+    font: 20vh/15vh LatoB, Arial, sans-serif;
     position: absolute;
     color: rgba(0, 0, 0, 0.1);
     top: 0;
@@ -1360,7 +1360,7 @@ p {
 
 .contaktus:after {
     content: "Conta";
-    font: 20vh/16vh HurmeGeomB, Arial, sans-serif;
+    font: 20vh/16vh LatoB, Arial, sans-serif;
     position: absolute;
     color: rgba(100, 100, 110, 0.1);
     bottom: 0;
@@ -1373,15 +1373,20 @@ p {
 
 /*4 page*/
 .adress {
-    margin: 12vh 0 13vh;
+    /*margin: 12vh 0 13vh;*/
 }
 
 .adress div {}
 
-
+#map{
+    box-sizing: border-box;
+    /*width: 100%;*/
+    height: 200px;
+    /*border: 1px dotted #eee;*/
+}
 
 /*Анимация планеты и комет */
-.adress div:after {
+.adress>div::after {
     content: "";
     display: inline-block;
     width: 5vw;
@@ -1392,7 +1397,6 @@ p {
     -webkit-background-size: cover;
     background-size: cover;
     border-radius: 50%;
-    /*box-shadow: -2px 0 10px rgba(0,0,0,0.3) inset;*/
 
     -webkit-animation: planet 20s linear 1ms 10 normal none;
     -o-animation: planet 20s linear 1ms 10 normal none;
@@ -1490,7 +1494,7 @@ p {
 
 .adress h3 {
     color: #ccc;
-    font: 2em HurmeGeom, Arial, sans-serif;
+    font: 2em LatoM, Arial, sans-serif;
 }
 
 .adress h3,
@@ -1501,7 +1505,7 @@ p {
 
 .adress a {
     display: block;
-    font: 1.1em HurmeGeom, Arial, sans-serif;
+    font: 1.1em LatoM, Arial, sans-serif;
     margin-bottom: 20px;
 }
 
@@ -1511,7 +1515,7 @@ p {
 }
 
 /*медиа-запросы*/
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 960px){
     .content{
        
     }
@@ -1544,27 +1548,24 @@ p {
         display: none;
     }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 550px){
 
     .backg1, .backg2, .backg3, .backg4, {
         /*overflow-x: hidden;*/
   }
     #canvas{
         /*width: 50%;*/
-    }
-    main{
-    /*;*/
-    }
+    }  
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 420px){
     nav a {
-        margin-left: 10px;
+        margin-right: 50px;
     }
     .presentation h2{
         font-size: 2em;
     }
 
-    main .servises li h2 {
+    .servises li h2 {
         font: 8.5vw HurmeGeomB, Arial, sans-serif;
     }
 
@@ -1590,19 +1591,27 @@ p {
         min-height: auto;
         margin: 5vh 0 6vh;
     }
+        .disabled-onepage-scroll nav.wrapper{
+            overflow: visible;
+        }
     #menu_toggle+ul li svg{
         display: none;
     }
     #menu_toggle{
         display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
     }
 
 
     #menu_toggle+ul{
-        background-color: rgba(200, 200, 255, 0.1); 
+        background-color: rgba(40, 40, 50, 0.8); 
         display: none;/**/
         padding-left: 0;
         padding-right: 0;
+        -webkit-box-shadow: 0 3px 3px -1px rgba(0,0,0,0.6);
+        box-shadow: 0 3px 3px -1px rgba(0,0,0,0.6);
         
     }
     #menu_toggle+ul li{

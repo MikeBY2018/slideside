@@ -6,6 +6,7 @@ $('document').ready(function() {
   	$('#teachers').load('../work/template/teachers.html');
   	$('#photogallery').load('../work/template/photogallery.html');
   	$('#payment').load('../work/template/payment.html');
+  	$('#other').load('../work/template/other.html');
 
 	$(function(){
 	  	var elements = $('.modal-overlay, .modal');
