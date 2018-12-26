@@ -8,6 +8,7 @@ $('document').ready(function() {
   	$('#payment').load('../work/template/payment.html');
   	$('#other').load('../work/template/other.html');
   	$('#welcomepage').load('../work/template/form.html');
+  	$('#formfinish').load('../work/template/form.html');
 
 	$(function(){
 	  	var elements = $('.modal-overlay, .modal');
