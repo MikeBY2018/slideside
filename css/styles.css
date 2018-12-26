@@ -1150,13 +1150,13 @@ p {
 
 
 
-/*Оформление AboutUS стр*/
+/*Оформление окна "Записаться" 
 
 .shadowbox {
     max-width: 860px;
     margin: 0 auto;
     padding-top: 3vh;
-}
+}*/
 
 .contacts {
     display: -webkit-flex;
