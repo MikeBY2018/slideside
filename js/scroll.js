@@ -3,13 +3,14 @@ $('document').ready(function() {
 	//*подгрузка Portfolio и нажатие на пункт меню. модальное окно
 	$('.about').load('../work/about.html');
   	$('.content_portfolio').load('../work/template/portfolio.html');
+
+  	$('#programm').load('../work/template/programm.html');
   	$('#teachers').load('../work/template/teachers.html');
-  	$('#photogallery').load('../work/template/photogallery.html');
-  	$('#payment').load('../work/template/payment.html');
-  	$('#other').load('../work/template/other.html');
-  	$('#welcomepage').load('../work/template/form.html');
-  	$('#welcomepage1').load('../work/template/form.html');
-  	$('#formfinish').load('../work/template/form.html');
+  	$('#photorewiev').load('../work/template/photorewiev.html');
+  	$('#welcomepage1').load('../work/template/form.html');  	
+
+  	$('#welcomepage').load('../work/template/form.html');//загрузка формы на первую страницу
+  	$('#formfinish').load('../work/template/form1.html');//загрузка формы на последнюю страницу
 
 	$(function(){
 	  	var elements = $('.modal-overlay, .modal');
