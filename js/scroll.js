@@ -58,7 +58,7 @@ $('document').ready(function() {
 	});
 
   /*--------------*/
-
+	startOff();
 });
 
 //scroll
@@ -125,23 +125,135 @@ $('#contacts').on('click', function(){$(".main").moveTo(4);});
 //---------------------
 
 	//слайдер на  3ей странице
-$('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    responsiveClass:true,
-    responsive:{
-        0:{
-            items:1,
-            nav:true
-        },
-        600:{
-            items:1,
-            nav:false
-        },
-        1000:{
-            items:2,
-            nav:true,
-            loop:false
-        }
-    }
-})
+// $('.owl-carousel').owlCarousel({
+//     loop:true,
+//     margin:10,
+//     responsiveClass:true,
+//     responsive:{
+//         0:{
+//             items:1,
+//             nav:true
+//         },
+//         600:{
+//             items:1,
+//             nav:false
+//         },
+//         1000:{
+//             items:2,
+//             nav:true,
+//             loop:false
+//         }
+//     }
+// })
+
+//show first img
+//show first img
+function startOff() {
+	$('.boxframe1').removeClass('openFrame');
+	$('.slidebox').css('width','100px');
+	$('img').removeClass('fullshine');
+	var thewidth = $('#firstRowImages').contents('.size1:nth-child(2)').contents().width();
+	$('.size1:nth-child(2)').width(thewidth);
+	$('.size1:nth-child(2)').contents().addClass('fullshine');
+	$('#firstRowImages').addClass('openFrame');
+};
+
+// click an image to display
+$('.gallimg').click(function switchimg(){
+	  var thewidth = (this).width;
+	$('.slidebox').css('width','100px');
+	$('img').removeClass('fullshine');
+	$('.boxframe1').removeClass('openFrame');
+	$(this).addClass('fullshine').parent('div').width(thewidth).parent().addClass('openFrame');
+
+});
+
+
+//next button
+
+
+
+
+//previous button
+$('.prevFrame').click(function(){
+  var thewidth = $('img.fullshine').parent('div').prev('div').contents().width();
+
+  $('img.fullshine').removeClass('fullshine').parent('div').css('width','100px').prev('div').width(thewidth).contents().addClass('fullshine');
+
+  if ($('.firstimg').hasClass('fullshine'))
+  prevRow();
+});
+
+
+
+function nextRow() {
+$('.openFrame').removeClass('openFrame').next().addClass('openFrame');
+$('.slidebox').css('width','100px');
+$('.gallimg').removeClass('fullshine');
+var thewidth = $('.openFrame').contents('div:nth-child(2)').contents().width();
+$('.openFrame').contents('div:nth-child(2)').width(thewidth).contents().addClass('fullshine');
+};
+
+function prevRow() {
+$('.openFrame').removeClass('openFrame').prev().addClass('openFrame');
+$('.slidebox').css('width','100px');
+$('.gallimg').removeClass('fullshine');
+var thewidth = $('.openFrame').contents('div:nth-child(6)').contents().width();
+$('.openFrame').contents('div:nth-child(6)').width(thewidth).contents().addClass('fullshine');
+};
+
+$('.jumpnextRow').click( function() { 
+  nextRow() 
+});
+
+$('.jumpprevRow').click( function() { 
+  prevRow() 
+});
+
+
+$(document).ready( function() { 
+   
+});
+
+$('.start').click( function() { 
+  startOff() 
+});
+
+
+$(window).resize(function() {
+  adaptive();
+}),
+  $(".carousel").ready(function() {
+    adaptive();
+  }),
+  $(function() {
+    $(".nav_images .img img").click(function() {
+      var a = $(this).attr("src");
+      $(".section_4_block").css({
+        background: "url(" + a + ")",
+        backgroundPosition: "center",
+        backgroundSize: "cover"
+      });
+    }),
+      adaptive(),
+      $(window).resize(function() {
+        adaptive();
+      }),
+      $(window).on("orientationchange", function() {
+        adaptive();
+      });
+  });
+function adaptive() {
+  var a = $(window).width();
+  1350 > a
+    ? ($(".header .carousel").css({ marginLeft: "-" + (1350 - a) / 2 + "px" }),
+      $(".commIcons_3").css({ opacity: 0 }),
+      $(".header .carousel-indicators").css({
+        marginLeft: (180 - a) / 5 + "px"
+      }),
+      540 < a
+        ? $(".inform").css({ marginLeft: (1350 - a) / 2.6 + "px" })
+        : $(".inform").css({ marginLeft: "35px" }))
+    : ($(".header .carousel").css({ marginLeft: "0" }),
+      $(".inform").css({ marginLeft: "0px" }));
+}

@@ -620,6 +620,7 @@ nav li {
     /*position: relative;*/
     /*overflow: hidden;*/
     color: #fff;
+    padding-bottom: 10vh;
 /*    display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -884,6 +885,9 @@ nav a {
 
 .cl-effect-4 a {
     padding: 0 0 5px;
+}
+.cl-effect-4 a {
+    word-wrap: normal;
 }
 
 .cl-effect-4 a::after {
@@ -1189,6 +1193,149 @@ p {
 }
 
 
+
+/*С сайта Owino*/
+.section_4 {
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    width: 100%;
+    z-index: 2
+}
+
+.section_4,
+.section_4_block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative
+}
+
+.section_4_block {
+    background: url("../img/carusel/2-1.jpg") 50%;
+    background-size: cover;
+    height: 40vw;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    margin: auto;
+    max-height: 1000px;
+    min-height: 300px;
+    width: 90%
+}
+
+.section_4_block,
+.section_4_block .nav_images {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end
+}
+
+.section_4_block .nav_images {
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    margin: 0 auto;
+    position: relative;
+    width: 100%
+}
+
+.section_4_block .nav_images .img img {
+    background: #fff;
+    border: 1px solid #fff;
+    position: relative;
+    width: 95%
+}
+
+.section_4_block .nav_images .img img:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    webkit-transform: scale(1.1)
+}
+/*конец блока  сайта Owino*/
+/*начало блока картинок*/
+.containerThird {
+  width:650px; margin:auto; overflow:hidden; height:450px;
+}
+.containerThird .boxframe1 {
+  width:530px;
+  height: 100px;
+  display:inline-block;
+  -webkit-transition:all 1s;
+}
+
+.containerThird .openFrame {
+  height: 200px;
+  width: 100%;
+}
+
+.containerThird .size1, .containerThird .size2, .containerThird .size3 {
+  position:relative;
+  float:left;
+  overflow:hidden;
+  height: 100%;
+  width: 50px;
+  margin:3px;
+  background: #ccc;
+  -webkit-transition:all 1s;
+}
+
+.containerThird .gallimg {
+  height:100%;
+  position: relative;
+  opacity: 0.2;
+   -webkit-transition:all 1s;
+   -webkit-filter: grayscale(100%); 
+}
+
+.containerThird .fullshine {
+  opacity: 1;
+  -webkit-filter: grayscale(0%); 
+}
+
+.containerThird .shinewidth {
+  /*width: inherit;*/
+}
+
+
+.containerThird .lastimg, .containerThird .firstimg {
+  width: 0px !important;
+  opacity: 0;
+  margin: 0;
+}
+
+.containerThird .fixRightBox {
+  position:fixed;
+  right:20px;
+  top:50px;
+}
+
+.containerThird .fixLeftBox {
+  position:fixed;
+  left:20px;
+  top:50px;
+}
+
+.containerThird a {
+  font-family: Arial, sans-serif;
+  color:#fff;
+  font-size:14px;
+  background:#7AB2FF;
+  padding:5px 12px;
+  display:block;
+  margin:5px 2px;
+  border-radius:4px;
+  text-decoration:underline;
+}
+
+.containerThird a:hover {
+  cursor:pointer;
+}
+
+/*конец блока картинок*/
 
 /*Оформление окна "Записаться" 
 
@@ -1680,10 +1827,17 @@ p {
 
     .backg1, .backg2, .backg3, .backg4, {
         /*overflow-x: hidden;*/
-  }
-    #canvas{
-        /*width: 50%;*/
-    }  
+    }
+    .presentation h1{
+        padding: 10vh 0 5vh;
+        text-align: center;
+        font-size: 1.8em;
+        line-height: 1.2;
+    }
+    .presentation h1 span{
+        font-size: 2em;
+        letter-spacing: 5px;
+    }
 }
 @media screen and (max-width: 420px){
     nav a {
@@ -1747,5 +1901,30 @@ p {
     #menu_toggle+ul li{
         display: block;
         text-align: right;
+    }
+}
+
+@media screen and (min-width: 550px) and (max-width: 960px) and (orientation: landscape) {
+    .presentation h1{
+        margin-top: 5vh;
+        font-size: 1.8em;
+        line-height: 1;
+    }
+    .presentation h1 span{
+        font-size: 2em;
+        letter-spacing: 5px;
+    }
+    .course ul{
+        margin-bottom: 2vh;
+    }
+    .course li{
+        padding: 0;
+        padding-bottom: 1vh;
+    }
+    .course li a{
+        font-size: 14px;
+    }
+    .button-center{
+        margin-top: 1vh;
     }
 }
