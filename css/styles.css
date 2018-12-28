@@ -382,7 +382,7 @@ img{
 a {
     display: inline-block;
     text-decoration: none;
-    color: #ссс;
+    color: #ccc;
     cursor: pointer;
     position: relative;    /*для того чтобы позиционировать стрелки после надписи ссылки*/
 }
@@ -637,7 +637,7 @@ nav li {
     margin-left: 1vw;
 }
 .presentation a{
-    color: #ccc;
+    color: #fff;
 }
 
 .ilustration{  
