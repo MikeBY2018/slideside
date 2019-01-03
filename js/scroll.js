@@ -1,20 +1,32 @@
 $('document').ready(function() {
 
 	//*подгрузка Portfolio и нажатие на пункт меню. модальное окно
-	$('.about').load('../work/about.html');
-  	$('.content_portfolio').load('../work/template/portfolio.html');
+		$('.about').load('../work/about.html');
+	  	$('.content_portfolio').load('../work/template/portfolio.html');
 
-  	$('#programm').load('../work/template/programm.html');
-  	$('#teachers').load('../work/template/teachers.html');
-  	$('#photorewiev').load('../work/template/photorewiev.html');
+	  	$('#programm').load('../work/template/programm.html');
+	  	$('#teachers').load('../work/template/teachers.html');
+	  	$('#photorewiev').load('../work/template/photorewiev.html');
+
+// функция работы формы на втором слайде при наведении на курсы
+	  	var featuresItem = $('.features_item');
+	  	featuresItem.mouseenter(function(){
+	  		var indexHover = featuresItem.index(this); // получение номера элемента в массиве!!
+	  		$('#welcomepage1').load('../work/template/form.html'); // подгрузка в модальные окна на второй странице  	
+	  		setTimeout(function(){checkLabel()}, 20);
+	  		setTimeout(function(){checkHover()}, 25);
+	  		function checkHover() {	
+	  		 	var checkboxInput = document.querySelectorAll('#welcomepage1 input[type=checkbox]');
+	  		 	checkboxInput[indexHover].checked = true;
+	  		}
+
+	  	});
+// закончена
 
 
-  	var hoverCourse = $('.features_item');
-  	$('#welcomepage1').load('../work/template/form.html'); // подгрузка в модальные окна на второй странице  	
+	  	$('#welcomepage').load('../work/template/form.html');//загрузка формы на первую страницу
+	  	$('#formfinish').load('../work/template/form.html');//загрузка формы на последнюю страницу
 
-  	$('#welcomepage').load('../work/template/form.html');//загрузка формы на первую страницу
-  	$('#formfinish').load('../work/template/form1.html');//загрузка формы на последнюю страницу
-  	console.log(hoverCourse);
 	
 	$(function(){
 	  	var elements = $('.modal-overlay, .modal');
