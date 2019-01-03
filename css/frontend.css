@@ -1,0 +1,15 @@
+
+.programm__body {
+  color: black;
+}
+
+.programm__body .text {
+  /* text-align: center; */
+}
+
+.programm__body h1 {
+  text-align: center;
+}
+
+.programm__body p {
+}

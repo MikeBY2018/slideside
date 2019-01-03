@@ -12,10 +12,10 @@ $('document').ready(function() {
 	  	var featuresItem = $('.features_item');
 	  	featuresItem.mouseenter(function(){
 	  		var indexHover = featuresItem.index(this); // получение номера элемента в массиве!!
-	  		$('#welcomepage1').load('../work/template/form.html'); // подгрузка в модальные окна на второй странице  	
+	  		$('#welcomepage1').load('../work/template/form.html'); // подгрузка в модальные окна на второй странице
 	  		setTimeout(function(){checkLabel()}, 20);
 	  		setTimeout(function(){checkHover()}, 25);
-	  		function checkHover() {	
+	  		function checkHover() {
 	  		 	var checkboxInput = document.querySelectorAll('#welcomepage1 input[type=checkbox]');
 	  		 	checkboxInput[indexHover].checked = true;
 	  		}
@@ -27,7 +27,7 @@ $('document').ready(function() {
 	  	$('#welcomepage').load('../work/template/form.html');//загрузка формы на первую страницу
 	  	$('#formfinish').load('../work/template/form.html');//загрузка формы на последнюю страницу
 
-	
+
 	$(function(){
 	  	var elements = $('.modal-overlay, .modal');
 		$('#portfolio').click(function(){
@@ -92,7 +92,7 @@ $(".main").onepage_scroll({
    responsiveFallback: 550,        // You can fallback to normal page scroll by defining the width of the browser in which
                                     // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
                                     // the browser's width is less than 600, the fallback will kick in.
-   direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
+   direction: "vertical"          // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".
 });
 
 // function animateStars(){
@@ -110,7 +110,7 @@ $(".main").onepage_scroll({
 // 			starCanvasHeight = 100;
 // 			remThisPageClass();
 // 			pageClass[0].classList.add('this_page');
-			
+
 // 		}else if(classNameBody == 'viewing-page-3'){
 // 			starCanvasHeight = 200;
 // 			remThisPageClass();
@@ -122,17 +122,17 @@ $(".main").onepage_scroll({
 // 			starCanvasHeight = 400;
 // 			remThisPageClass();
 // 		}
-// 		canvas.css({ 
+// 		canvas.css({
 // 			'transform': 'translate(0 ,' + starCanvasHeight + '%)',
 // 			'-webkit-transform': 'translate(0, ' + starCanvasHeight + '%)',
 // 			'-ms-transform': 'translate(0, ' + starCanvasHeight + '%)',
-// 	    }); 
+// 	    });
 
 // 		function remThisPageClass(){
 // 			for(i = 0; i < 3; i++){
 // 				pageClass[i].classList.remove('this_page');
 // 			}
-// 		};   
+// 		};
 // }
 
 $('#course').on('click', function(){$(".main").moveTo(2);});
