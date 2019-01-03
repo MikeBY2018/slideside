@@ -62,7 +62,7 @@
 
   color: #2b2e38;
   
-  /*background: #fff;*/
+  background: #fff;
 }
 
 .remodal.remodal-is-opening,
@@ -309,6 +309,12 @@
 @media only screen and (min-width: 641px) {
   .remodal {
     max-width: 700px;
+  }
+}
+@media only screen and (min-width: 641px) {
+  #photorewiev.remodal {
+    max-width: 1000px;
+    padding: 0;
   }
 }
 

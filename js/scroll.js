@@ -6,20 +6,42 @@ $('document').ready(function() {
 
 	  	$('#programm').load('../work/template/programm.html');
 	  	$('#teachers').load('../work/template/teachers.html');
-	  	$('#photorewiev').load('../work/template/photorewiev.html');
+
+	  	$('#photorewiev').load('../work/template/photorewiev.html', function(){
+	  		$('.owl-carousel').owlCarousel({
+			    loop:true,
+			    responsiveClass:true,
+			    responsive:{
+			        0:{
+			            items:1,
+			            nav:true
+			        },
+			        600:{
+			            items:1,
+			            nav:false
+			        },
+			        1000:{
+			            items:2,
+			            margin:10,
+			            nav:true,
+			            loop:false
+			        }
+			    }
+			})
+	  	});
 
 // функция работы формы на втором слайде при наведении на курсы
 	  	var featuresItem = $('.features_item');
 	  	featuresItem.mouseenter(function(){
 	  		var indexHover = featuresItem.index(this); // получение номера элемента в массиве!!
-	  		$('#welcomepage1').load('../work/template/form.html'); // подгрузка в модальные окна на второй странице  	
-	  		setTimeout(function(){checkLabel()}, 20);
-	  		setTimeout(function(){checkHover()}, 25);
+	  		$('#welcomepage1').load('../work/template/form.html', function(){
+	  			checkLabel();
+	  			checkHover();
+	  		}); // подгрузка в модальные окна на второй странице  	
 	  		function checkHover() {	
 	  		 	var checkboxInput = document.querySelectorAll('#welcomepage1 input[type=checkbox]');
 	  		 	checkboxInput[indexHover].checked = true;
 	  		}
-
 	  	});
 // закончена
 
@@ -76,6 +98,8 @@ $('document').ready(function() {
   /*--------------*/
 
 });
+
+
 
 //scroll
 $(".main").onepage_scroll({
@@ -141,26 +165,7 @@ $('#contacts').on('click', function(){$(".main").moveTo(4);});
 //---------------------
 
 	//слайдер на  3ей странице
-// $('.owl-carousel').owlCarousel({
-//     loop:true,
-//     margin:10,
-//     responsiveClass:true,
-//     responsive:{
-//         0:{
-//             items:1,
-//             nav:true
-//         },
-//         600:{
-//             items:1,
-//             nav:false
-//         },
-//         1000:{
-//             items:2,
-//             nav:true,
-//             loop:false
-//         }
-//     }
-// })
+
 
 
 // $(window).resize(function() {
