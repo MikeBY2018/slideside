@@ -26,6 +26,7 @@
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 40px;
+  margin-bottom: 80px;
 }
 
 .review_block {
@@ -97,6 +98,10 @@
 .remodal {
   border-radius: 4px;
   background: white;
+}
+
+.remodal img {
+  width: 100%;
 }
 
 @media screen and (max-width: 420px) {

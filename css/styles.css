@@ -41,14 +41,14 @@ svg{
 
 }
 
-img{
-    /*width: 100%;*/
+img {
+    /* width: 100%; */
 }
 /*настройка блоков отображения*/
 /*подложки на страницах*/
 .backg1, .backg2, .backg3, .backg4{
     position: relative;
- 
+
 
 }
 
@@ -75,7 +75,7 @@ img{
     position: relative;
 }
 .container {
-   
+
 }
 .clearfix::after{
     content: '';
@@ -112,7 +112,7 @@ img{
     margin: 0 auto;
     min-height: 85vh;
     width: 100px;
-    
+
     font: 1.4em LatoB, Arial, sans-serif;
     z-index: 0;
 }
@@ -430,11 +430,11 @@ li {
 }
 
 .visuallyHidden {
-    position: absolute; 
-    overflow: hidden; 
-    clip: rect(0 0 0 0); 
-    height: 1px; width: 1px; 
-    margin: -1px; padding: 0; border: 0; 
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px; width: 1px;
+    margin: -1px; padding: 0; border: 0;
 }
 
 .hamburger {
@@ -445,7 +445,7 @@ li {
     height: 30px;
     position: relative;
     z-index: 2;
- 
+
 }
 
 .hamburger .bar {
@@ -456,7 +456,7 @@ li {
     display: block;
     border-radius: 4px;
     transition: all 0.4s ease-in-out;
-    position: absolute; 
+    position: absolute;
 }
 .bar1 {
     top: 0;
@@ -567,11 +567,11 @@ nav li {
 /* Оформление тела*/
 .main_content {
     position: relative;
-    overflow: hidden; 
+    overflow: hidden;
     z-index: 9;
     min-height: 80vh;
     padding: 10vh 0;
-   
+
 }
 .backg1 .main_content{
     overflow: hidden;
@@ -629,7 +629,7 @@ nav li {
     display: -o-flex;
     display: flex;
     justify-content: space-around;*/
-    
+
 }
 .presentation{
 /*    max-width: 50%;
@@ -643,9 +643,9 @@ nav li {
     color: #fff;
 }
 
-.ilustration{  
-    position: absolute; 
-    top: 10vh; 
+.ilustration{
+    position: absolute;
+    top: 10vh;
     right: 1.5vw;
     max-width: 400px;
     /*align-self: center;
@@ -660,7 +660,7 @@ nav li {
         width: 100%;
     }
     .welcome-box-circle-content{
-        position: relative;    
+        position: relative;
         top: 10vh;
         width: 100%;
         text-align: center;
@@ -687,7 +687,7 @@ nav li {
         animation-iteration-count: infinite;
         animation-timing-function: linear;
         z-index: 2;
-        
+
     }
     .welcome-box-circle-content .circle-icon.circle-icon-lock{
         animation-duration: 30s;
@@ -712,7 +712,7 @@ nav li {
         display: -ms-flex;
         display: -o-flex;
         display: flex;
-        
+
         justify-content: center;
         align-items: center;
     }
@@ -795,7 +795,7 @@ nav li {
 
 
 #about {
-    
+
 }
 .button-center{
     text-align: center;
@@ -824,7 +824,7 @@ nav li {
 
 /*Оформление подвала сайта*/
 footer {
-    
+
 }
 
 /*.pages {
@@ -943,10 +943,14 @@ a:hover {
     -o-flex-wrap: wrap;
     flex-wrap: wrap;
     justify-content: center;
-    
+
 
     /*max-width: 720px;*/
     margin: 10vh auto;
+}
+
+.features_list img {
+  width: 60px;
 }
 
 .features_list > .features_item{
@@ -959,7 +963,7 @@ a:hover {
 
     letter-spacing: 1px;
     color: #fff;
-    
+
     margin: 5px;
     cursor: pointer;
     min-width: 200px;
@@ -971,7 +975,7 @@ a:hover {
 }
 
 
-.features_item > .image{    
+.features_item > .image{
      -webkit-transition: .5s linear;
     -o-transition: .5s linear;
     -moz-transition: .5s linear;
@@ -1038,7 +1042,7 @@ background-color: #48325c;
     left: 0;
     right: 0;
     top: 0;
-    bottom: 0;    
+    bottom: 0;
 }
 .features_item .image:hover > .services_bg{
     opacity: 1;
@@ -1132,7 +1136,7 @@ p {
 .features>div:first-child:hover h2,
 .features>div:last-child:hover h2 {
     color: rgba(255, 255, 255, 1);
-    
+
 }
 
 .features>div:first-child+div:hover {
@@ -1146,7 +1150,7 @@ p {
 .features>div:first-child+div:hover h2,
 .features>div:nth-last-child(2):hover h2 {
     color: rgba(0, 0, 0, 0.3);
-   
+
 }*/
 
 
@@ -1290,12 +1294,12 @@ p {
         display:inline-block;
         -webkit-transition:all 1s;
       }
-      
+
       .openFrame {
         height: 240px;
         width: 100%;
       }
-      
+
       .size1, .size2, .size3 {
         position:relative;
         float:left;
@@ -1306,43 +1310,43 @@ p {
         background: #ccc;
         -webkit-transition:all 1s;
       }
-      
+
       .gallimg {
         height:100%;
         position: relative;
         /*opacity: 0.2;*/
          -webkit-transition:all 1s;
-         -webkit-filter: grayscale(100%); 
+         -webkit-filter: grayscale(100%);
       }
-      
+
       .fullshine {
         opacity: 1;
-        -webkit-filter: grayscale(0%); 
+        -webkit-filter: grayscale(0%);
       }
-      
+
       .shinewidth {
         /*width: inherit;*/
       }
-      
-      
+
+
       .lastimg, .firstimg {
         width: 0px !important;
         opacity: 0;
         margin: 0;
       }
-      
+
       .fixRightBox {
         position:fixed;
         right:20px;
         top:50px;
       }
-      
+
       .fixLeftBox {
         position:fixed;
         left:20px;
         top:50px;
       }
-      
+
       #windowSlider a {
         font-family: Arial, sans-serif;
         color:#fff;
@@ -1354,13 +1358,13 @@ p {
         border-radius:4px;
         text-decoration:underline;
       }
-      
+
       #windowSlider a:hover {
         cursor:pointer;
       }
 /*конец блока картинок*/
 
-/*Оформление окна "Записаться" 
+/*Оформление окна "Записаться"
 
 .shadowbox {
     max-width: 860px;
@@ -1425,12 +1429,12 @@ p {
 }
 .contactus {
     color: #ddc;
-    text-align: left;    
+    text-align: left;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     -o-user-select: none;
-    user-select: none;    
+    user-select: none;
 }
 .contactus h2 {
     font: 1.4em LatoB, Arial, sans-serif;
@@ -1611,7 +1615,7 @@ p {
 
 }
 
-/*Анимация планеты и комет 
+/*Анимация планеты и комет
     .adress>div::after {
         content: "";
         display: inline-block;
@@ -1747,7 +1751,7 @@ p {
 
 /*Снежинки
     .snowback{
-        position: absolute; 
+        position: absolute;
         top: 0;
         z-index: 0;
     }
@@ -1816,7 +1820,7 @@ p {
 /*медиа-запросы*/
 @media screen and (max-width: 960px){
     .content{
-       
+
     }
         /*.ilustration{
             max-width: 400px;
@@ -1827,7 +1831,7 @@ p {
             }
             .welcome-box-circle-content .circle-icon i{
                 width: 40px;
-                height: 40px;        
+                height: 40px;
             }
             .welcome-box-circle-content .circle-icon i.lock{
                 top: 280px;
@@ -1890,10 +1894,10 @@ p {
 	transform: translate(130vw);
 	}
 
- 
+
     /* Для меню */
     .cl-effect-4{display: block;}
-    
+
     header nav{
         flex-direction: column;
         min-height: auto;
@@ -1914,13 +1918,13 @@ p {
 
 
     #menu_toggle+ul{
-        background-color: rgba(40, 40, 50, 0.8); 
+        background-color: rgba(40, 40, 50, 0.8);
         display: none;/**/
         padding-left: 0;
         padding-right: 0;
         -webkit-box-shadow: 0 3px 3px -1px rgba(0,0,0,0.6);
         box-shadow: 0 3px 3px -1px rgba(0,0,0,0.6);
-        
+
     }
     #menu_toggle+ul li{
         display: block;
