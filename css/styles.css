@@ -944,9 +944,8 @@ a:hover {
     flex-wrap: wrap;
     justify-content: center;
 
-
     /*max-width: 720px;*/
-    margin: 10vh auto;
+    margin: 0 auto 10vh auto;
 }
 
 .features_list img {
@@ -1030,7 +1029,8 @@ background-color: #48325c;
     text-align: center;
 }
 .features_item p{
-    text-align: left;
+    font-size: 12px;
+    text-align: center;
 }
 .features_item .image > .features_bg{
     opacity: 0;
