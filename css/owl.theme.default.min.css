@@ -10,7 +10,11 @@
 }
 
 .owl-theme .owl-nav {
-    margin-top: 10px
+    font-size: 8em;
+    line-height: 1;
+    position: absolute;
+    top: 70%;
+    width: 100%;
 }
 
 .owl-theme .owl-nav [class*=owl-] {
@@ -22,14 +26,27 @@
     display: inline-block;
     cursor: pointer;
     border-radius: 3px;
+    position: absolute;
+}
+button.owl-prev{
+    left: 0;
+}
+button.owl-next{
+    right: 0;
 }
 
 
-
 .owl-theme .owl-nav [class*=owl-]:hover {
-    background: #869791;
+    /*background: #869791;*/
+    text-shadow: 0px 0px 2px rgba(0,0,0,0.5);
     color: #FFF;
     text-decoration: none
+}
+.owl-theme .owl-nav [class*=owl-]:active {
+    outline: none;
+}
+.owl-theme .owl-nav [class*=owl-]:focus {
+    outline: none;
 }
 
 .owl-theme .owl-nav .disabled {
