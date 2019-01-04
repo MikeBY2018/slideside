@@ -100,16 +100,12 @@
   background: white;
 }
 
-<<<<<<< HEAD
+
 .remodal img{
 position: relative;
 width: 80%;
-
-=======
-.remodal img {
-  width: 100%;
->>>>>>> 98c085477a807f4809b69554bd479c8af8c605a3
 }
+
 
 @media screen and (max-width: 420px) {
   .reviews {
