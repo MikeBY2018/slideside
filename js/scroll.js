@@ -163,6 +163,19 @@ $('#course').on('click', function(){$(".main").moveTo(2);});
 $('#contacts').on('click', function(){$(".main").moveTo(4);});
 
 //---------------------
+$('#course').on('click', function(){
+	let a = $(document).width();
+	if(a > 550) {
+		$('#course').removeAttr('href');
+	}
+});
+
+$('#contacts').on('click', function(){
+	let a = $(document).width();
+	if(a > 550) {
+		$('#contacts').removeAttr('href');
+	}
+});
 
 //слайдер на  3ей странице
 
