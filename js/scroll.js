@@ -164,44 +164,44 @@ $('#contacts').on('click', function(){$(".main").moveTo(4);});
 
 //---------------------
 
-	//слайдер на  3ей странице
+//слайдер на  3ей странице
 
 
 
-// $(window).resize(function() {
-//   adaptive();
-// }),
-//   $(".carousel").ready(function() {
-//     adaptive();
-//   }),
-//   $(function() {
-//     $(".nav_images .img img").click(function() {
-//       var a = $(this).attr("src");
-//       $(".section_4_block").css({
-//         background: "url(" + a + ")",
-//         backgroundPosition: "center",
-//         backgroundSize: "cover"
-//       });
-//     }),
-//       adaptive(),
-//       $(window).resize(function() {
-//         adaptive();
-//       }),
-//       $(window).on("orientationchange", function() {
-//         adaptive();
-//       });
-//   });
-// function adaptive() {
-//   var a = $(window).width();
-//   1350 > a
-//     ? ($(".header .carousel").css({ marginLeft: "-" + (1350 - a) / 2 + "px" }),
-//       $(".commIcons_3").css({ opacity: 0 }),
-//       $(".header .carousel-indicators").css({
-//         marginLeft: (180 - a) / 5 + "px"
-//       }),
-//       540 < a
-//         ? $(".inform").css({ marginLeft: (1350 - a) / 2.6 + "px" })
-//         : $(".inform").css({ marginLeft: "35px" }))
-//     : ($(".header .carousel").css({ marginLeft: "0" }),
-//       $(".inform").css({ marginLeft: "0px" }));
-// }
+	// $(window).resize(function() {
+	//   adaptive();
+	// }),
+	//   $(".carousel").ready(function() {
+	//     adaptive();
+	//   }),
+	//   $(function() {
+	//     $(".nav_images .img img").click(function() {
+	//       var a = $(this).attr("src");
+	//       $(".section_4_block").css({
+	//         background: "url(" + a + ")",
+	//         backgroundPosition: "center",
+	//         backgroundSize: "cover"
+	//       });
+	//     }),
+	//       adaptive(),
+	//       $(window).resize(function() {
+	//         adaptive();
+	//       }),
+	//       $(window).on("orientationchange", function() {
+	//         adaptive();
+	//       });
+	//   });
+	// function adaptive() {
+	//   var a = $(window).width();
+	//   1350 > a
+	//     ? ($(".header .carousel").css({ marginLeft: "-" + (1350 - a) / 2 + "px" }),
+	//       $(".commIcons_3").css({ opacity: 0 }),
+	//       $(".header .carousel-indicators").css({
+	//         marginLeft: (180 - a) / 5 + "px"
+	//       }),
+	//       540 < a
+	//         ? $(".inform").css({ marginLeft: (1350 - a) / 2.6 + "px" })
+	//         : $(".inform").css({ marginLeft: "35px" }))
+	//     : ($(".header .carousel").css({ marginLeft: "0" }),
+	//       $(".inform").css({ marginLeft: "0px" }));
+	// }
