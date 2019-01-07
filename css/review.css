@@ -1,6 +1,5 @@
 
 .reviews {
-  margin-top: 100px;
   width: 100%;
 }
 
@@ -13,8 +12,11 @@
 .reviews__header h1 {
   font-size: 50px;
   font-weight: bolder;
-}
 
+}
+.backg1 .reviews__header h1{
+    margin-top: 70px;
+}
 .reviews__header p {
   margin: 0 auto;
   max-width: 500px;
@@ -109,6 +111,5 @@ width: 80%;
 
 @media screen and (max-width: 420px) {
   .reviews {
-    margin-top: 170px;
   }
 }

@@ -46,11 +46,11 @@ $('document').ready(function() {
 // закончена
 
 
-	  	$('#welcomepage').load('../work/template/form.html');//загрузка формы на первую страницу
-	  	$('#formfinish').load('../work/template/form.html');//загрузка формы на последнюю страницу
+  	$('#welcomepage').load('../work/template/form.html');//загрузка формы на первую страницу
+  	$('#formfinish').load('../work/template/form.html');//загрузка формы на последнюю страницу
 
 
-	$(function(){
+	/*$(function(){
 	  	var elements = $('.modal-overlay, .modal');
 		$('#portfolio').click(function(){
 		    elements.addClass('active');
@@ -65,7 +65,7 @@ $('document').ready(function() {
 	});
 
 
-	/*$(function(){
+	$(function(){
 		var elements_1 = $('.modal-overlay, .modal');
 	  $('#about').click(function(){
 		  elements_1.addClass('active');
@@ -78,25 +78,6 @@ $('document').ready(function() {
 		  $('#about').removeClass('this_page');
 	  });
   });*/
-
-
-  // гамбургер меню
-	$(function(){
-	  	var $mt = $('.hamburger3');
-	  	var $menu = $('nav ul');
-
-	  	$(window).resize(function(){
-	  		if($menu.css('display') == 'none' && window.innerWidth > 420){
-	  			$menu.show();
-	  		}
-	  	});
-	  	$mt.click(function(){
-	  		$menu.slideToggle(500);
-	  	});
-	});
-
-  /*--------------*/
-
 });
 
 
