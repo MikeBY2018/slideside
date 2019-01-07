@@ -1,5 +1,5 @@
 $('document').ready(function() {
-
+	checkLabel();
 //*подгрузка Portfolio и нажатие на пункт меню. модальное окно
 	$('.about').load('../work/about.html');
   	$('.content_portfolio').load('../work/template/portfolio.html');
@@ -44,7 +44,18 @@ $('document').ready(function() {
   		}
   	});
 // закончена
-
+	function checkLabel(){
+		var checkbox = document.querySelectorAll('#pageall label');
+		for (var i = 0; i < checkbox.length; i++) {
+			checkbox[i].onclick = function(){
+				if(this.previousElementSibling.checked){			
+					this.previousElementSibling.checked = false;
+				}else{
+					this.previousElementSibling.checked = true;
+				};
+			}
+		};
+	};
 
   	$('#welcomepage').load('../work/template/form.html');//загрузка формы на первую страницу
   	$('#formfinish').load('../work/template/form.html');//загрузка формы на последнюю страницу
@@ -145,16 +156,16 @@ $('#contacts').on('click', function(){$(".main").moveTo(4);});
 
 //---------------------
 $('#course').on('click', function(){
-	let a = $(document).width();
-	if(a > 550) {
-		$('#course').removeAttr('href');
+	var a = $(document).width();
+	if(a < 550) {
+		$('#course').attr('href','#page_02');
 	}
 });
 
 $('#contacts').on('click', function(){
-	let a = $(document).width();
-	if(a > 550) {
-		$('#contacts').removeAttr('href');
+	var a = $(document).width();
+	if(a < 550) {
+		$('#contacts').attr('href','#page_04');
 	}
 });
 
