@@ -1,3 +1,4 @@
+/*@import url('onepage-scroll.css');*/
 @import url('modal.css');
 @import url('animate.css');
 
@@ -1749,7 +1750,7 @@ p {
 }
 
 
-/*Снежинки*/
+/*Снежинки
     .snowback{
         position: absolute;
         top: 0;
@@ -1814,7 +1815,7 @@ p {
       to {
         transform: translateY(-2000px);
       }
-    }
+    }*/
 /*----*/
 
 /*медиа-запросы*/

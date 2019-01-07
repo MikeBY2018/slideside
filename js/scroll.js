@@ -1,48 +1,48 @@
 $('document').ready(function() {
 
-	//*подгрузка Portfolio и нажатие на пункт меню. модальное окно
-		$('.about').load('../work/about.html');
-	  	$('.content_portfolio').load('../work/template/portfolio.html');
+//*подгрузка Portfolio и нажатие на пункт меню. модальное окно
+	$('.about').load('../work/about.html');
+  	$('.content_portfolio').load('../work/template/portfolio.html');
 
-	  	$('#programm').load('../work/template/programm.html');
-	  	$('#teachers').load('../work/template/teachers.html');
+  	$('#programm').load('../work/template/programm.html');
+  	$('#teachers').load('../work/template/teachers.html');
 
-	  	$('#photorewiev').load('../work/template/photorewiev.html', function(){
-	  		$('.owl-carousel').owlCarousel({
-			    loop:true,
-			    responsiveClass:true,
-			    responsive:{
-			        0:{
-			            items:1,
-			            nav:true
-			        },
-			        600:{
-			            items:1,
-			            nav:false
-			        },
-			        1000:{
-			            items:2,
-			            margin:10,
-			            nav:true,
-			            loop:false
-			        }
-			    }
-			})
-	  	});
+  	$('#photorewiev').load('../work/template/photorewiev.html', function(){
+  		$('.owl-carousel').owlCarousel({
+		    loop:true,
+		    responsiveClass:true,
+		    responsive:{
+		        0:{
+		            items:1,
+		            nav:true
+		        },
+		        600:{
+		            items:1,
+		            nav:false
+		        },
+		        1000:{
+		            items:2,
+		            margin:10,
+		            nav:true,
+		            loop:false
+		        }
+		    }
+		})
+  	});
 
 // функция работы формы на втором слайде при наведении на курсы
-	  	var featuresItem = $('.features_item');
-	  	featuresItem.mouseenter(function(){
-	  		var indexHover = featuresItem.index(this); // получение номера элемента в массиве!!
-	  		$('#welcomepage1').load('../work/template/form.html', function(){
-	  			checkLabel();
-	  			checkHover();
-	  		}); // подгрузка в модальные окна на второй странице  	
-	  		function checkHover() {	
-	  		 	var checkboxInput = document.querySelectorAll('#welcomepage1 input[type=checkbox]');
-	  		 	checkboxInput[indexHover].checked = true;
-	  		}
-	  	});
+  	var featuresItem = $('.features_item');
+  	featuresItem.mouseenter(function(){
+  		var indexHover = featuresItem.index(this); // получение номера элемента в массиве!!
+  		$('#welcomepage1').load('../work/template/form.html', function(){
+  			checkLabel();
+  			checkHover();
+  		}); // подгрузка в модальные окна на второй странице  	
+  		function checkHover() {	
+  		 	var checkboxInput = document.querySelectorAll('#welcomepage1 input[type=checkbox]');
+  		 	checkboxInput[indexHover].checked = true;
+  		}
+  	});
 // закончена
 
 
