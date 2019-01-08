@@ -5,7 +5,7 @@ $('#course').on('click', function(){
   } else {
      window.location.href = '../index.html';
      setTimeOut(function(){
-      $('#course').on('click', function(){$(".main").moveTo(2);})
+      $(".main").moveTo(2);
      },10)
   }
 });

@@ -1,5 +1,4 @@
-/*@import url('onepage-scroll.css');*/
-@import url('modal.css');
+/*@import url('onepage-scroll.css');*/ @import url('modal.css');
 @import url('animate.css');
 
 @import url('owl.theme.default.min.css');
@@ -1744,10 +1743,24 @@ p {
 #page_02, #index, #page_03,#page_04{
   /*display: none;  */
 }
+/*Настройки балуна и хинта*/
+    .shield-baloon{
+        width: 40px;
+        background-image: radial-gradient(circle closest-side at 50% 10%, #4b2c55 5px, #2b2040 30px);
+        float: left;
+        overflow: hidden;
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+    .baloon-header{
+        color: #33a;
+    }
+    .baloon-body{
+        font: 1.1em LatoM, Arial, sans-serif;
+        letter-spacing: -0.03em;
+    }
 
-.backg5>div{
-    min-height: 100vh;
-}
+
 
 
 /*Снежинки

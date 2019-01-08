@@ -1,11 +1,8 @@
 $('document').ready(function() {
-	checkLabel();
 //*подгрузка Portfolio и нажатие на пункт меню. модальное окно
-	$('.about').load('../work/about.html');
-  	$('.content_portfolio').load('../work/template/portfolio.html');
 
-  	$('#programm').load('../work/template/programm.html');
-  	$('#teachers').load('../work/template/teachers.html');
+  	// $('#programm').load('../work/template/programm.html');
+  	// $('#teachers').load('../work/template/teachers.html');
 
   	$('#photorewiev').load('../work/template/photorewiev.html', function(){
   		$('.owl-carousel').owlCarousel({
@@ -43,24 +40,33 @@ $('document').ready(function() {
   		 	checkboxInput[indexHover].checked = true;
   		}
   	});
-// закончена
-	function checkLabel(){
-		var checkbox = document.querySelectorAll('#pageall label');
-		for (var i = 0; i < checkbox.length; i++) {
-			checkbox[i].onclick = function(){
-				if(this.previousElementSibling.checked){			
-					this.previousElementSibling.checked = false;
-				}else{
-					this.previousElementSibling.checked = true;
-				};
-			}
-		};
+// закончена  	
+  	// if(classNameBody == 'viewing-page-4'){}
+  		$('#formfinish').load('../work/template/form.html',function(){checkLabel();});
+	//загрузка формы на последнюю страницу
+});
+
+	$('#about').click(function(j) {		
+		$('#welcomepage').load('../work/template/form.html', function(){
+			checkLabel();
+		});//загрузка формы на первую страницу
+	});
+
+
+
+function checkLabel(){
+	var checkbox = document.querySelectorAll('#pageall label');
+	console.log(checkbox.length);
+	for (var i = 0; i < checkbox.length; i++) {
+		checkbox[i].onclick = function(){
+			if(this.previousElementSibling.checked){			
+				this.previousElementSibling.checked = false;
+			}else{
+				this.previousElementSibling.checked = true;
+			};
+		}
 	};
-
-  	$('#welcomepage').load('../work/template/form.html');//загрузка формы на первую страницу
-  	$('#formfinish').load('../work/template/form.html');//загрузка формы на последнюю страницу
-
-
+};
 	/*$(function(){
 	  	var elements = $('.modal-overlay, .modal');
 		$('#portfolio').click(function(){
@@ -89,7 +95,7 @@ $('document').ready(function() {
 		  $('#about').removeClass('this_page');
 	  });
   });*/
-});
+
 
 
 
