@@ -75,7 +75,7 @@ img {
     position: relative;
 }
 .container {
-
+  z-index: 10;
 }
 .clearfix::after{
     content: '';
@@ -1969,4 +1969,10 @@ p {
     .button-center{
         margin-top: 1vh;
     }
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
