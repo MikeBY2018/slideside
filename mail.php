@@ -1,7 +1,6 @@
 <?php 
-if (!empty($_POST['from']) AND !empty($_POST['to']) AND !empty($_POST['phone'])) 
-{
-    $headers = 'From: OR MEDIA' .
+if (!empty($_POST['name']) AND !empty($_POST['phone'])){
+    $headers = 'From: babskij2015@gmail.com' .
                 'Reply-To: groupby@ormedia.by\r\n' .
                 'X-Mailer: PHP/' . phpversion();
          
@@ -9,10 +8,10 @@ if (!empty($_POST['from']) AND !empty($_POST['to']) AND !empty($_POST['phone']))
              
     $letter = "Данные сообщения:";
     $letter .="\n\n";
-    $letter .="Откуда: ".$_POST['from'];
-    $letter .="\nКуда: ".$_POST['to'];
+    $letter .="Имя: ".$_POST['name'];
     $letter .="\nТелефон: ".$_POST['phone'];
-    $letter .="\nВыбор тарифа: ".$_POST['options'];
+    $letter .="\nКурс: ".$_POST['front'];
+    $letter .="\nО себе: ".$_POST['message'];
     
     if (mail("babskij2015@gmail.com", $theme, $letter, $headers)){
         echo "Сообщение отправлено!";
