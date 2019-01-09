@@ -1,5 +1,3 @@
-$(() => {});
-
   $(".review")
     .mouseenter(function() {
       $(".review__text-button", this).css({
