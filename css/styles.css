@@ -1972,10 +1972,12 @@ p {
     }
 }
 
+#particles-js,
 #particles1-js,
 #particles2-js,
 #particles3-js,
 #particles4-js {
+  z-index: 2;
   position: absolute;
   width: 100%;
   height: 100%;
