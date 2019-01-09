@@ -1,0 +1,43 @@
+
+
+.programm {
+  /*margin-top: 100px;*/
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.programm__header {
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.programm__header h1 {
+  font-size: 50px;
+  font-weight: bolder;
+}
+.backg1 .programm__header h1 {
+  margin-top: 50px;
+}
+.programm__header p {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 0 10px;
+}
+
+.programm__body {
+  background: white;
+  border-radius: 4px;
+  margin-top: 40px;
+  padding: 10px;
+}
+
+.programm__body li {
+  margin: 10px 20px;
+}
+
+@media screen and (max-width: 420px) {
+  .programm {
+    /*margin-top: 170px;*/
+  }
+}

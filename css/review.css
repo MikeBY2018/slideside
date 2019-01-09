@@ -1,0 +1,117 @@
+
+.reviews {
+  width: 100%;
+}
+
+.reviews__header {
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.reviews__header h1 {
+  font-size: 50px;
+  font-weight: bolder;
+
+}
+.backg1 .reviews__header h1{
+    margin-top: 70px;
+}
+.reviews__header p {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 0 10px;
+}
+
+.reviews__body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+.review_block {
+  /* flex: 1; */
+  margin: 20px 10px;
+  /* outline: 1px solid black; */
+}
+
+.review {
+  position: relative;
+  box-shadow: 0 0 7px 1px black;
+  /* position: relative; */
+  border-radius: 3px;
+  margin: auto;
+  background: white;
+  height: 400px;
+  width: 300px;
+}
+
+.review img {
+  position: relative;
+  z-index: 2;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.review p {
+  color: black;
+}
+
+.review__text {
+  position: relative;
+  width: 100%;
+  margin: -17px auto;
+  padding: 0 10px;
+  z-index: 1;
+}
+
+.review__text-button {
+  opacity: 0;
+  /* opacity: 1; */
+  position: absolute;
+  top: -150px;
+  /* top: 0; */
+  left: 0;
+  right: 20px;
+  height: 190px;
+  background: white;
+  transition: all 1s;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review__text-link {
+  cursor: pointer;
+  padding: 12px 17px;
+  border-radius: 4px;
+  background: rgb(255, 13, 13);
+  transition: all 2s;
+  font-weight: bolder;
+}
+
+.review__text-link:hover {
+  background: rgb(231, 0, 0);
+}
+
+.remodal {
+  border-radius: 4px;
+  background: white;
+}
+
+
+.remodal img{
+position: relative;
+width: 80%;
+}
+
+
+@media screen and (max-width: 420px) {
+  .remodal img{
+    position: relative;
+    width: 80%;
+    }
+}
