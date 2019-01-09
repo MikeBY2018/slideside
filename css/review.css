@@ -1,3 +1,6 @@
+body {
+  position: relative;
+}
 
 .reviews {
   width: 100%;
