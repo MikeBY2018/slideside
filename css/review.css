@@ -110,8 +110,13 @@ width: 80%;
 
 
 @media screen and (max-width: 420px) {
+<<<<<<< HEAD
   .remodal img{
     position: relative;
     width: 80%;
     }
+=======
+  .reviews {
+  }
+>>>>>>> 4c59d00a51bbd7076fc56a7eca3cd270d8d321fa
 }
