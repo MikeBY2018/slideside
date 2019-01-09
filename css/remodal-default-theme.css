@@ -65,6 +65,13 @@
   background: #fff;
 }
 
+<<<<<<< HEAD
+.remodal img{
+  width: 80%;
+}
+
+=======
+>>>>>>> 4c59d00a51bbd7076fc56a7eca3cd270d8d321fa
 .remodal.remodal-is-opening,
 .remodal.remodal-is-closing {
   -webkit-animation-duration: 0.3s;
