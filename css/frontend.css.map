@@ -1,0 +1,1 @@
+{"version":3,"sources":["frontend.css"],"names":[],"mappings":"AAGA,gBACE,MAAA,KAOF,mBACE,WAAA","file":"frontend.css","sourcesContent":["\r\n\r\n\r\n.programm__body {\r\n  color: black;\r\n}\r\n\r\n.programm__body .text {\r\n  /* text-align: center; */\r\n}\r\n\r\n.programm__body h1 {\r\n  text-align: center;\r\n}\r\n\r\n.programm__body p {\r\n}\r\n"]}
