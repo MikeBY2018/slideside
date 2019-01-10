@@ -494,9 +494,24 @@
                                     </li>
                                 </ul>
                             </div> -->
-                            <div class="containerSl">
-                                <div style="width:1000px;">
-                                    <div id="firstRowImages" class="boxframe1">
+
+                            
+                                <div style="max-width:908px;margin:auto;padding:0 10px 10px;   margin-top: 10%; margin-bottom: 10%;">
+                                    <div id="demo1" class="flex-images">
+                                        <div class="item" data-w="294" data-h="180"><img src="img/course/course1.jpg"></div>
+                                        <div class="item" data-w="207" data-h="180"><img src="img/course/course2.jpg"></div>
+                                        <div class="item" data-w="207" data-h="180"><img src="img/course/course3.jpg"></div>
+                                        <div class="item" data-w="225" data-h="180"><img src="img/course/course4.jpg"></div>
+                                        <div class="item" data-w="232" data-h="180"><img src="img/course/course5.jpg"></div>
+                                        <div class="item" data-w="330" data-h="180"><img src="img/course/course6.jpg"></div>
+                                        <div class="item" data-w="154" data-h="180"><img src="img/course/course7.jpg"></div>
+                                        <div class="item" data-w="232" data-h="180"><img src="img/course/course8.jpg"></div>
+                                        <div class="item" data-w="155" data-h="180"><img src="img/course/course9.jpg"></div>
+                                        <div class="item" data-w="155" data-h="180"><img src="img/course/course10.jpg"></div>
+                                       
+                                    </div>
+                                </div>
+                                   <!-- <div id="firstRowImages" class="boxframe1">
                                         <div class="slidebox size1 firstimg" style="width: 100px;"><img class="gallimg row1 firstimg" src="#" alt="photocourse"></div>
 
                                         <div class="slidebox size1" style="width: 100px;"><img class="gallimg row1" width="300" src="img/course/course1.jpg" alt="photocourse1"></div>
@@ -543,9 +558,9 @@
                                         <div class="slidebox size3" style="width: 100px;"><img class="gallimg row1" width="300" src="img/course/course6.jpg" alt="photocourse15"></div>
 
                                         <div class="slidebox size3 lastimg" style="width: 100px;"><img class="gallimg row1 lastimg" src="#" alt="photocourse15.1"></div>
-                                    </div>
-                                </div>
-                            </div>
+                                    </div>-->
+                                
+                           
 
                             <!--<div class="fixRightBox">
                               <a class="nextFrame">Next Image ></a>
@@ -637,6 +652,7 @@
     <script src = "libjs/jquery.onepage-scroll.min.js"></script>
     <script src = "libjs/owl.carousel.min.js"></script>
     <script src = "libjs/remodal.min.js"></script>
+    <script src="libjs/jquery.flex-images.js"></script>
     <script src = "js/scroll.js"></script>
     <script src = "https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src = "js/hamburger.js"></script>
@@ -654,6 +670,19 @@
     <script src="libjs/particles.min.js"></script>
     <script src="js/particles.js"></script>
 
+ <script>
+        $('#demo1').flexImages({rowHeight: 160});
+      
+
+        if (~window.location.href.indexOf('http')) {
+            (function() {var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;po.src = 'https://apis.google.com/js/plusone.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);})();
+            (function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=114593902037957";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+            $('#github_social').html('\
+                <iframe style="float:left;margin-right:15px" src="//ghbtns.com/github-btn.html?user=Pixabay&repo=jQuery-flexImages&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>\
+                <iframe style="float:left;margin-right:15px" src="//ghbtns.com/github-btn.html?user=Pixabay&repo=jQuery-flexImages&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>\
+            ');
+        }
     </script>
 
 
