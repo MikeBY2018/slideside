@@ -4,14 +4,14 @@
   //   .next()
   //   .slideDown();
 
-  $(".accordion a").click(function(j) {
+  $(".accordion .accordion_buttons").click(function(j) {
     var dropDown = $(this)
       .closest("li")
-      .find("p");
+      .find("div");
 
     $(this)
       .closest(".accordion")
-      .find("p")
+      .find("div")
       .not(dropDown)
       .slideUp();
 
@@ -20,7 +20,7 @@
     } else {
       $(this)
         .closest(".accordion")
-        .find("a.active")
+        .find(".accordion_buttons.active")
         .removeClass("active");
       $(this).addClass("active");
     }
