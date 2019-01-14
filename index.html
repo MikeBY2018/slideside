@@ -8,9 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/styles.css?=01">
     <link rel="stylesheet" href="css/onepage-scroll.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/social.css">
+
 </head>
 <body>
     <header>
+
         <!--Отрисовка иконок использующихся в документе-->
         <svg class = "hidden">
             <symbol id="icon-vk" viewBox="0 0 800 800">
@@ -215,6 +219,7 @@
                 <div class="wrapper">
                     <div class="main_content">
                         <div class="maincode">
+
 
                             <div class="mainWord">
                                 <span class="m">M</span>
@@ -493,7 +498,7 @@
     <footer>
         <div class="wrapper">
             <div class="social">
-                <a href="https://vk.com/" target="_blank">
+                <!-- <a href="https://vk.com/" target="_blank">
                     <svg class = "icon icon-vk">
                         <use xlink:href="#icon-vk"></use>
                     </svg>
@@ -507,7 +512,19 @@
                     <svg class = "icon icon-linkedin">
                         <use xlink:href="#icon-ln"></use>
                     </svg>
-                </a>
+                </a> -->
+                <ul class="menu topLeft">
+                  <li class="share bottom">
+                    <i class="fa fa-share-alt"></i>
+                    <ul class="submenu">
+                      <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                      <li><a href="#" class="googlePlus"><i class="fa fa-google-plus"></i></a></li>
+                      <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                  </li>
+                </ul>
+
             </div>
         </div>
     </footer>
@@ -538,7 +555,7 @@
 
  <script>
         $('#demo1').flexImages({rowHeight: 160});
-      
+
 
         if (~window.location.href.indexOf('http')) {
             (function() {var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;po.src = 'https://apis.google.com/js/plusone.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);})();
